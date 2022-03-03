@@ -38,3 +38,14 @@
     transform: translate(0, 0);
   }
 }
+
+@media screen and (max-width: 500px) {
+  .marquee {
+    width: 3291px;
+  }
+
+  .marquee span {
+    padding-left: 3291px;
+    min-width: 3291px;
+  }
+}

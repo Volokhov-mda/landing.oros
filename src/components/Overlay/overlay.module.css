@@ -93,12 +93,11 @@
   left: 50%;
   bottom: 50%;
   transform: translate(-50%, -50%);
-  animation: out calc(var(--transition-duration) * 2) forwards;
 }
 
 .startJourney.scale {
-  transform: scale(68) translate(-10.5%, -10%);
   pointer-events: none;
+  /* transform: scale(205) translate(-10.5%, -10%); */
   animation: in calc(var(--transition-duration) * 2) forwards;
 }
 
@@ -114,8 +113,20 @@
   }
 }
 
-@media screen and (max-width: 500px) {
-  .scale {
-    transform: scale(50) translate(-10%, 0%);
+@media screen and (min-width: 2561px) {
+  .startJourney.scale {
+    transform: scale(205) translate(-10.5%, -10%);
+  }
+}
+
+@media screen and (max-width: 2560px) {
+  .startJourney.scale {
+    transform: scale(105) translate(-10.5%, -10%);
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .startJourney.scale {
+    transform: scale(68) translate(-10.5%, -10%);
   }
 }
