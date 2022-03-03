@@ -1,0 +1,10 @@
+@font-face {
+  font-family: CyGrotesk;
+  src: url(/public/fonts/cy-grotesk-grand-dark.otf);
+}
+
+@font-face {
+  font-family: CraftworkGrotesk;
+  src: url(/public/fonts/CraftworkGrotesk-Regular.ttf);
+  font-weight: normal;
+}

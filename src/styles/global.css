@@ -1,0 +1,13 @@
+html,
+button,
+input,
+select {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  border-radius: 0;
+}
+
+body {
+  padding: env(safe-area-inset);
+  overflow: hidden;
+}

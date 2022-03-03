@@ -1,0 +1,121 @@
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.titleWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.title,
+.marquee,
+.contacts,
+.hint,
+.controls,
+.startJourney {
+  pointer-events: all;
+  transition-property: opacity, transform;
+  transition-duration: var(--transition-duration);
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.title {
+  padding-top: 3rem;
+}
+
+.marquee {
+  margin-top: 2rem;
+}
+
+.floatingMenu {
+  position: fixed;
+  bottom: 2.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  padding: 0 2.25rem;
+  box-sizing: border-box;
+}
+
+.floatingMenu > * {
+  display: flex;
+  align-items: center;
+}
+
+.floatingMenu > *:first-child {
+  justify-content: flex-start;
+}
+
+.floatingMenu > *:nth-child(2) {
+  justify-content: center;
+}
+
+.floatingMenu > *:nth-child(3) {
+  justify-content: flex-end;
+}
+
+.hint {
+  user-select: none;
+  cursor: default;
+}
+
+.startJourney {
+  position: fixed;
+  left: 50%;
+  bottom: 8.75rem;
+  transform: translateX(calc(-50% - 2.5rem));
+  transition-property: transform, top, bottom, left;
+  transition-duration: calc(var(--transition-duration) * 2);
+}
+
+.startJourney.center {
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  animation: out calc(var(--transition-duration) * 2) forwards;
+}
+
+.startJourney.scale {
+  transform: scale(68) translate(-10.5%, -10%);
+  pointer-events: none;
+  animation: in calc(var(--transition-duration) * 2) forwards;
+}
+
+@keyframes in {
+  0% {
+  }
+
+  99% {
+  }
+
+  100% {
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .scale {
+    transform: scale(50) translate(-10%, 0%);
+  }
+}

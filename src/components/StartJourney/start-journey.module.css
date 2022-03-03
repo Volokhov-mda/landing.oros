@@ -1,0 +1,62 @@
+.startJourney {
+  display: flex;
+  align-items: center;
+}
+
+.startJourney.light > .button {
+  color: var(--primary-color);
+}
+
+.startJourney > * {
+  padding: 0 0.25rem;
+}
+
+.startJourney > *:first-child {
+  text-align: right;
+}
+
+.startJourney > *:nth-child(2) {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.button {
+  width: 5rem;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition-property: text-decoration-color, opacity;
+  transition-duration: var(--transition-duration);
+}
+
+.button:hover {
+  text-decoration-color: var(--secondary-color);
+}
+
+.startJourney.light > .button:hover {
+  text-decoration-color: var(--primary-color);
+}
+
+.button.hidden {
+  opacity: 0;
+  user-select: none;
+}
+
+.logoWrapper {
+  width: 7.75rem;
+  height: 3.5rem;
+}
+
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.startJourney.dark .logo {
+  filter: invert(1);
+}
+
+.startJourney.light .logo {
+  filter: var(--filter-to-primary-color);
+}

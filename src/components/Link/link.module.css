@@ -1,0 +1,19 @@
+.link {
+  text-decoration: none;
+  padding-bottom: 0.25rem;
+  transition: opacity var(--transition-duration);
+}
+
+.link.dark {
+  color: var(--secondary-color);
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.link.light {
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.link:hover {
+  opacity: 0.8;
+}

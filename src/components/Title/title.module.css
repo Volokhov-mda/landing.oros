@@ -1,0 +1,14 @@
+.title {
+  font-family: CyGrotesk, sans-serif;
+  font-size: 9.5vw;
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  cursor: default;
+}
+
+@media screen and (min-width: 1921px) {
+  .title {
+    font-size: 9rem;
+  }
+}

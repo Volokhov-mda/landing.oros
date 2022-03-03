@@ -1,0 +1,33 @@
+.floatingButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border-radius: 50%;
+  width: 2.4rem;
+  height: 2.4rem;
+  font-size: 0.6rem;
+  font-weight: bold;
+  line-height: 0.6rem;
+  transition-property: transform, opacity;
+  transition-duration: var(--transition-duration);
+}
+
+.floatingButton.dark {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+.floatingButton.light {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+.floatingButton:hover {
+  transform: translateY(1px);
+  opacity: 0.85;
+}
+
+.floatingButton:active {
+  transform: translateY(2px);
+}
