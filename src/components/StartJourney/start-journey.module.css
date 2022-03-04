@@ -1,6 +1,7 @@
 .startJourney {
   display: flex;
   align-items: center;
+  pointer-events: none;
 }
 
 .startJourney.light > .button {
@@ -27,6 +28,7 @@
   text-decoration-color: transparent;
   transition-property: text-decoration-color, opacity;
   transition-duration: var(--transition-duration);
+  pointer-events: all;
 }
 
 .button:hover {
@@ -46,7 +48,6 @@
   width: 7.75rem;
   height: 3.5rem;
 }
-
 
 .logo {
   width: 100%;

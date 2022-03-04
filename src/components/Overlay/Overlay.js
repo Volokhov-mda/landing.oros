@@ -18,7 +18,7 @@ const Overlay = ({ className, ...props }) => {
   useEffect(() => {
     const scrollSnap = document.getElementById("scrollSnap");
 
-    scrollSnap.addEventListener("scroll", () => {
+    const onScroll = () => {
       const scrollTop = scrollSnap.scrollTop;
 
       if (scrollTop < window.innerHeight / 2) {
@@ -27,12 +27,18 @@ const Overlay = ({ className, ...props }) => {
         setBreakpointFirst(true);
       }
 
-      if (scrollTop > window.innerHeight * 1.1) {
+      if (scrollTop > window.innerHeight * 1.25) {
         setBreakpointSecond(true);
       } else {
         setBreakpointSecond(false);
       }
-    });
+    };
+
+    scrollSnap.addEventListener("scroll", onScroll);
+
+    return () => {
+      scrollSnap.removeEventListener("scroll", onscroll);
+    };
   }, []);
 
   return (
@@ -74,6 +80,7 @@ const Overlay = ({ className, ...props }) => {
             breakpointFirst && styles.center,
             breakpointSecond && styles.scale
           )}
+          // style={{ transform: "scale(calc(1 / 68))", position: "fixed" }}
         />
       </div>
     </div>
