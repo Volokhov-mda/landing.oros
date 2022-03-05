@@ -8,7 +8,9 @@ const Marquee = ({ className, children }) => {
   return (
     <div className={className}>
       <div className={styles.marquee}>
-        <span>{decodeURIComponent(JSON.parse(`"${children}"`))}</span>
+        <span id="span-1">
+          {decodeURIComponent(JSON.parse(`"${children}"`))}
+        </span>
       </div>
       <div className={clsx(styles.marquee, styles.marquee2)}>
         <span>{decodeURIComponent(JSON.parse(`"${children}"`))}</span>

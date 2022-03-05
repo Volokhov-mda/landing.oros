@@ -1,10 +1,25 @@
 .scrollSnap {
+  position: relative;
   flex-basis: 50%;
   max-height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-snap-stop: always;
+}
+
+.content {
+  position: relative;
+}
+
+.screen {
+  transition: opacity calc(var(--transition-duration) * 2);
+  transition-delay: var(--transition-duration);
+  opacity: 1;
+}
+
+.screen.hidden {
+  opacity: 0;
 }
 
 /* .screen.dark {

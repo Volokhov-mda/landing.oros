@@ -6,7 +6,6 @@
   height: 100%;
   pointer-events: none;
   overflow: hidden;
-  z-index: 1;
 }
 
 .titleWrapper {
@@ -111,20 +110,10 @@
 
 .startJourney.scale {
   pointer-events: none;
-  transform: scale(var(--scale-size)) translate(-10.5%, -15%);
-  animation: in calc(var(--transition-duration) * 2) forwards;
+  transform: scale(var(--scale-size)) translate(-10.5%, -7%);
 }
 
-@keyframes in {
-  0% {
-    position: fixed;
-  }
-
-  99% {
-    position: fixed;
-  }
-
-  100% {
-    position: absolute;
-  }
+.startJourney.absolute {
+  position: absolute;
+  /* transform: scale(var(--scale-size)) translate(-10.5%, -7%); */
 }

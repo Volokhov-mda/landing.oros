@@ -1,5 +1,5 @@
 .screen {
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  /* z-index: 1; */
+  position: relative;
 }

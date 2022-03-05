@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 
-import { marqueeText, email } from "consts";
+import { marqueeText, email, transitionDuration } from "consts";
 
 import Title from "components/Title";
 import Marquee from "components/Marquee";
@@ -14,6 +14,7 @@ import StartJourney from "components/StartJourney/StartJourney";
 const Overlay = ({ className, ...props }) => {
   const [breakpointFirst, setBreakpointFirst] = useState(false);
   const [breakpointSecond, setBreakpointSecond] = useState(false);
+  const [breakpointSecondDelay, setBreakpointSecondDelay] = useState(false);
 
   useEffect(() => {
     const scrollSnap = document.getElementById("scrollSnap");
@@ -29,8 +30,13 @@ const Overlay = ({ className, ...props }) => {
 
       if (scrollTop > window.innerHeight * 1.25) {
         setBreakpointSecond(true);
+
+        setTimeout(() => {
+          setBreakpointSecondDelay(true);
+        }, transitionDuration * 2);
       } else {
         setBreakpointSecond(false);
+        setBreakpointSecondDelay(false);
       }
     };
 
@@ -78,7 +84,8 @@ const Overlay = ({ className, ...props }) => {
           className={clsx(
             styles.startJourney,
             breakpointFirst && styles.center,
-            breakpointSecond && styles.scale
+            breakpointSecond && styles.scale,
+            breakpointSecondDelay && styles.absolute
           )}
           // style={{ transform: "scale(calc(1 / 68))", position: "fixed" }}
         />
