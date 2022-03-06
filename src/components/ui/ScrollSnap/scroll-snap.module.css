@@ -8,16 +8,11 @@
   scroll-snap-stop: always;
 }
 
-.content {
+.screen {
   position: relative;
 }
 
-.screen {
-  transition: opacity calc(var(--transition-duration) * 2);
-  transition-delay: var(--transition-duration);
-  opacity: 1;
-}
-
-.screen.hidden {
-  opacity: 0;
+.screen.snap {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }

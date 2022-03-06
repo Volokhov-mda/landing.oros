@@ -1,0 +1,15 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: var(--max-width);
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: left;
+  font-size: 4rem;
+}

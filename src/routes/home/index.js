@@ -1,21 +1,14 @@
 import { useEffect, useState } from "react";
-import { useAtom } from "jotai";
 import clsx from "clsx";
 
-import { marqueeText } from "consts";
-
-import { themeAtom } from "data/atoms";
-
-import Overlay from "components/Overlay";
-import Screen from "components/Screen";
-import Title from "components/Title";
-import Marquee from "components/Marquee";
-import ScrollInfo from "components/ScrollInfo";
+import Overlay from "components/partials/Overlay";
+import ScrollSnap from "components/ui/ScrollSnap";
+import ScrollInfo from "components/partials/ScrollInfo";
+import Contacts from "components/partials/Contacts";
 
 import styles from "./styles.module.css";
 
 const Home = () => {
-  const [theme] = useAtom(themeAtom);
   const [breakpoint, setBreakpoint] = useState(false);
 
   useEffect(() => {
@@ -39,27 +32,27 @@ const Home = () => {
   }, []);
 
   return (
-    <div id="scrollSnap" className={styles.scrollSnap}>
+    <ScrollSnap id="scrollSnap">
       <div className={styles.content}>
         <Overlay />
-        <Screen className={clsx(styles.screen, styles.primaryPalette)} />
-        <Screen className={clsx(styles.screen, styles.primaryPalette)} />
-        <Screen
+        <ScrollSnap.Screen className={styles.screen} snap />
+        <ScrollSnap.Screen className={styles.screen} snap />
+        <ScrollSnap.Screen
           className={clsx(
             styles.screen,
             styles.primaryPalette,
             !breakpoint && styles.hidden
           )}
-          minHeight="200vh"
+          height={window.innerWidth <= 1000 ? "200vh" : "265vh"}
+          snap={window.innerWidth <= 1000}
         >
           <ScrollInfo />
-        </Screen>
-        <Screen className={clsx(styles.screen, styles.primaryPalette)}>
-          <Title>OROS DIGITAL 3</Title>
-          <Marquee className={styles.indent}>{marqueeText}</Marquee>
-        </Screen>
+        </ScrollSnap.Screen>
+        <ScrollSnap.Screen className={styles.screen} snap>
+          <Contacts />
+        </ScrollSnap.Screen>
       </div>
-    </div>
+    </ScrollSnap>
   );
 };
 

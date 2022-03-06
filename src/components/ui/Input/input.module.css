@@ -1,0 +1,24 @@
+.input {
+  border: none;
+  padding-bottom: 1rem;
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+.input.dark,
+.input.dark::placeholder {
+  color: var(--secondary-color);
+}
+
+.input.dark {
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.input.light,
+.input.light::placeholder {
+  color: var(--primary-color);
+}
+
+.input.light {
+  border-bottom: 1px solid var(--primary-color);
+}

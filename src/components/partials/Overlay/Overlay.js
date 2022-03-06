@@ -3,13 +3,13 @@ import clsx from "clsx";
 
 import { marqueeText, email, transitionDuration } from "consts";
 
-import Title from "components/Title";
-import Marquee from "components/Marquee";
-import Link from "components/Link";
-import FloatingButton from "components/FloatingButton";
+import Title from "components/ui/Title";
+import Marquee from "components/ui/Marquee";
+import Link from "components/ui/Link";
+import FloatingButton from "components/ui/FloatingButton";
+import StartJourney from "components/ui/StartJourney";
 
 import styles from "./overlay.module.css";
-import StartJourney from "components/StartJourney/StartJourney";
 
 const Overlay = ({ className, ...props }) => {
   const [breakpointFirst, setBreakpointFirst] = useState(false);
@@ -30,13 +30,8 @@ const Overlay = ({ className, ...props }) => {
 
       if (scrollTop > window.innerHeight * 1.25) {
         setBreakpointSecond(true);
-
-        setTimeout(() => {
-          setBreakpointSecondDelay(true);
-        }, transitionDuration * 2);
       } else {
         setBreakpointSecond(false);
-        setBreakpointSecondDelay(false);
       }
     };
 
@@ -47,10 +42,17 @@ const Overlay = ({ className, ...props }) => {
     };
   }, []);
 
+  className = clsx(!breakpointSecond && styles.frontLayer, className);
+
   return (
     <div id={styles.overlay} className={className} {...props}>
       <div className={styles.content}>
-        <div className={styles.titleWrapper}>
+        <div
+          className={clsx(
+            styles.titleWrapper,
+            breakpointSecond && styles.remove
+          )}
+        >
           <Title
             className={clsx(styles.title, breakpointFirst && styles.hidden)}
           >
@@ -63,7 +65,12 @@ const Overlay = ({ className, ...props }) => {
           </Marquee>
         </div>
 
-        <div className={styles.floatingMenu}>
+        <div
+          className={clsx(
+            styles.floatingMenu,
+            breakpointSecond && styles.hidden
+          )}
+        >
           <div
             className={clsx(styles.contacts, breakpointFirst && styles.hidden)}
           >
@@ -79,16 +86,21 @@ const Overlay = ({ className, ...props }) => {
           </div>
         </div>
 
-        <StartJourney
-          showButton={breakpointFirst}
+        <div
           className={clsx(
-            styles.startJourney,
+            styles.startJourneyWrapper,
             breakpointFirst && styles.center,
             breakpointSecond && styles.scale,
-            breakpointSecondDelay && styles.absolute
           )}
-          // style={{ transform: "scale(calc(1 / 68))", position: "fixed" }}
-        />
+        >
+          <StartJourney
+            showButton={breakpointFirst}
+            className={clsx(
+              styles.startJourney,
+              breakpointSecond && styles.hidden
+            )}
+          />
+        </div>
       </div>
     </div>
   );

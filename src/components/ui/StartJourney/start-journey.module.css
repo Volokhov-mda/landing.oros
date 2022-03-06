@@ -4,6 +4,11 @@
   pointer-events: none;
 }
 
+.startJourney,
+.startJourney > * {
+  pointer-events: none;
+}
+
 .startJourney.light > .button {
   color: var(--primary-color);
 }
@@ -24,24 +29,36 @@
 .button {
   width: 5rem;
   font-size: 1.2rem;
+
   text-decoration: underline;
   text-decoration-color: transparent;
   transition-property: text-decoration-color, opacity;
   transition-duration: var(--transition-duration);
+
+  -webkit-text-decoration: underline;
+  -webkit-text-decoration-color: transparent;
+  -webkit-transition-property: text-decoration-color, opacity;
+  -webkit-transition-duration: var(--transition-duration);
+
   pointer-events: all;
 }
 
-.button:hover {
+.startJourney.dark > .button:hover {
   text-decoration-color: var(--secondary-color);
+  -webkit-text-decoration-color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 
 .startJourney.light > .button:hover {
   text-decoration-color: var(--primary-color);
+  -webkit-text-decoration-color: var(--primary-color);
+  background-color: var(--d);
 }
 
 .button.hidden {
   opacity: 0;
   user-select: none;
+  pointer-events: none;
 }
 
 .logoWrapper {

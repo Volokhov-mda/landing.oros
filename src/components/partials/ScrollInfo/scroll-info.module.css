@@ -1,0 +1,92 @@
+.scrollInfo {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 0 2rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.scrollInfo > * {
+  z-index: 1;
+}
+
+.scrollInfo.dark {
+  color: var(--primary-color);
+}
+
+.scrollInfo.light {
+  color: var(--secondary-color);
+}
+
+.titleWrapper {
+  position: relative;
+}
+
+.stickyTitle {
+  position: sticky;
+  white-space: normal;
+  text-align: left;
+  top: 36%;
+  right: 0rem;
+  margin-top: 43%;
+  margin-bottom: 62%;
+  font-size: 4rem;
+}
+
+.infoWrapper {
+  display: grid;
+  gap: 1rem;
+  padding-top: 6.5rem;
+  padding-bottom: 8rem;
+}
+
+.infoWrapper > * {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+.round {
+  position: absolute;
+  top: -110%;
+  left: 50%;
+  transform: translate(-45%, 0);
+  width: calc(2rem * var(--scale-size));
+  height: calc(2rem * var(--scale-size));
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.round.dark {
+  background-color: var(--secondary-color);
+}
+
+.round.light {
+  background-color: var(--primary-color);
+}
+
+@media screen and (max-width: 1000px) {
+  .scrollInfo {
+    padding-top: 2rem;
+  }
+
+  .stickyTitle {
+    position: static;
+    margin: 0;
+  }
+
+  .scrollInfo {
+    grid-template-columns: 1fr;
+  }
+
+  .infoWrapper {
+    padding: 0;
+    margin-top: 2rem;
+  }
+
+  .infoWrapper > * {
+    scroll-snap-align: unset;
+  }
+}

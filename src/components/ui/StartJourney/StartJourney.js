@@ -3,7 +3,7 @@ import { useAtom } from "jotai";
 
 import { themeAtom } from "data/atoms";
 
-import { ReactComponent as Logo } from "./../../images/logos/logo.svg";
+import { ReactComponent as Logo } from "images/logos/logo.svg";
 
 import styles from "./start-journey.module.css";
 
