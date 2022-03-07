@@ -4,6 +4,8 @@ import { useAtom } from "jotai";
 
 import { email } from "consts";
 
+import localizedText from "consts/localizedText.json";
+
 import { languageAtom, themeAtom } from "data/atoms";
 
 import Title from "components/ui/Title";
@@ -23,6 +25,16 @@ const Overlay = ({ className, ...props }) => {
 
   const handleChangeLanguage = () =>
     setLanguage(language === "eng" ? "ru" : "eng");
+
+  const handleScroll = () => {
+    const scrollSnap = document.getElementById("scrollSnap");
+    const scrollInfoScreen = document.getElementById("scroll-info");
+
+    scrollSnap.scrollTo({
+      top: scrollInfoScreen.offsetTop,
+      behavior: "smooth",
+    });
+  };
 
   useEffect(() => {
     const scrollSnap = document.getElementById("scrollSnap");
@@ -90,7 +102,7 @@ const Overlay = ({ className, ...props }) => {
             </Link>
           </div>
           <div className={clsx(styles.hint, breakpointSecond && styles.hidden)}>
-            swipe down
+            {localizedText[language].swipeDown}
           </div>
           <div
             className={clsx(styles.controls, breakpointFirst && styles.hidden)}
@@ -110,6 +122,7 @@ const Overlay = ({ className, ...props }) => {
         >
           <StartJourney
             showButton={breakpointFirst}
+            onClick={handleScroll}
             className={clsx(
               styles.startJourney,
               breakpointSecond && styles.hidden
@@ -122,6 +135,6 @@ const Overlay = ({ className, ...props }) => {
 };
 
 const capitalizeFirstChar = (string) =>
-    string.charAt(0).toUpperCase() + string.slice(1);
+  string.charAt(0).toUpperCase() + string.slice(1);
 
 export default Overlay;

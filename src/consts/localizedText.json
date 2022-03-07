@@ -1,5 +1,6 @@
 {
   "ru": {
+    "swipeDown": "листай вниз",
     "aboutUs": "О нас",
     "slidersText": "300+ инфлюенсеров со всего мира в 10+ категорий на расстоянии одного клика",
     "compassText": "Берем все заботы на себя: от первых идей до проработанной стратегии продвижения",
@@ -14,6 +15,7 @@
     "tel": "Тел"
   },
   "eng": {
+    "swipeDown": "swipe down",
     "aboutUs": "About us",
     "slidersText": "300+ influencers from all over the world in 10+ categories just a click away",
     "compassText": "We take care of everything: from the first ideas to a well-developed promotion strategy",

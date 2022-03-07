@@ -9,14 +9,14 @@ import Icon from "components/ui/Icon";
 
 import styles from "./start-journey.module.css";
 
-const StartJourney = ({ showButton, className, ...props }) => {
+const StartJourney = ({ showButton, onClick, className, ...props }) => {
   const [theme] = useAtom(themeAtom);
 
   className = clsx(styles.startJourney, styles[theme], className);
 
   return (
     <div className={className} {...props}>
-      <button className={clsx(styles.button, !showButton && styles.hidden)}>
+      <button onClick={onClick} className={clsx(styles.button, !showButton && styles.hidden)}>
         Start <br /> Journey
       </button>
       <div className={styles.logoWrapper}>

@@ -38,6 +38,7 @@ const Home = () => {
         <ScrollSnap.Screen className={styles.screen} height="100vh" snap />
         <ScrollSnap.Screen className={styles.screen} height="100vh" snap />
         <ScrollSnap.Screen
+          id="scroll-info"
           className={clsx(
             styles.screen,
             styles.scrollInfo,

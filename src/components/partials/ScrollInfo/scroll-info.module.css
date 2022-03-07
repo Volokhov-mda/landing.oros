@@ -87,6 +87,10 @@
   }
 
   .infoWrapper > * {
+    scroll-snap-align: center;
+  }
+  
+  .infoWrapper > *:first-child {
     scroll-snap-align: unset;
   }
 
