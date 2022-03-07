@@ -23,6 +23,8 @@ const Overlay = ({ className, ...props }) => {
   const [breakpointFirst, setBreakpointFirst] = useState(false);
   const [breakpointSecond, setBreakpointSecond] = useState(false);
 
+  console.log(styles[language]);
+
   const handleChangeLanguage = () =>
     setLanguage(language === "eng" ? "ru" : "eng");
 
@@ -117,7 +119,8 @@ const Overlay = ({ className, ...props }) => {
           className={clsx(
             styles.startJourneyWrapper,
             breakpointFirst && styles.center,
-            breakpointSecond && styles.scale
+            breakpointSecond && styles.scale,
+            styles[language]
           )}
         >
           <StartJourney

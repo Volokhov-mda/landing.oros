@@ -30,7 +30,7 @@ const StartJourney = ({ showButton, onClick, className, ...props }) => {
       >
         {startJourneyText.map((value, i) => {
           if (value === " ") {
-            return <br />;
+            return <br key={i} />;
           }
 
           return value;

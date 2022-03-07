@@ -61,7 +61,6 @@
 
 .title {
   padding-top: 3rem;
-  
 }
 
 .marquee {
@@ -118,7 +117,7 @@
 
 .startJourneyWrapper {
   position: fixed;
-  right: calc(50% - 8.25rem / 2);
+  right: calc(50% - 4rem);
   bottom: 8.75rem;
   transition-property: transform, top, bottom, right, opacity;
   transition-duration: calc(var(--transition-duration) * 2);
@@ -132,6 +131,13 @@
 
 .startJourneyWrapper.scale {
   pointer-events: none;
+}
+
+.startJourneyWrapper.scale.ru {
+  transform: scale(var(--scale-size)) translate(-17.5%, -7%);
+}
+
+.startJourneyWrapper.scale.eng {
   transform: scale(var(--scale-size)) translate(-10.5%, -7%);
 }
 
