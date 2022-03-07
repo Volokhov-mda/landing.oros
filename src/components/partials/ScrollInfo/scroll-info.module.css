@@ -33,7 +33,7 @@
   right: 0rem;
   margin-top: 43%;
   margin-bottom: 62%;
-  font-size: 4rem;
+  font-size: var(--title-font-size);
 }
 
 .infoWrapper {
@@ -50,7 +50,7 @@
 
 .round {
   position: absolute;
-  top: -110%;
+  bottom: -10%;
   left: 50%;
   transform: translate(-45%, 0);
   width: calc(2rem * var(--scale-size));

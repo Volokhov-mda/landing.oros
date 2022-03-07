@@ -10,3 +10,35 @@
 .checkbox {
   margin-top: 1.5rem;
 }
+
+.policy {
+  font-weight: bold;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  margin-top: 2.75rem;
+  transition: opacity var(--transition-duration);
+}
+
+.button .icon {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.5rem;
+  transition: transform var(--transition-duration);
+}
+
+.button:hover {
+  opacity: 0.7;
+}
+
+.button:hover .icon {
+  transform: translateX(1px);
+}
+
+@media screen and (max-width: 1000px) {
+  .inputs {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

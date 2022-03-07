@@ -1,0 +1,39 @@
+.footer {
+  display: flex;
+}
+
+.logo {
+  flex-shrink: 0;
+  width: 5.5rem;
+  height: 2.75rem;
+}
+
+.footer.dark > .logo {
+  filter: invert(1);
+}
+
+.footer.light > .logo {
+  filter: var(--filter-to-primary-color);
+}
+
+.contacts {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: .6rem;
+  margin-left: 1rem;
+}
+
+.contacts > * {
+  display: inline-block;
+}
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .contacts {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}

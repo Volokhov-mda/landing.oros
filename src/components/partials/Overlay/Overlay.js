@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import clsx from "clsx";
+import { useAtom } from "jotai";
 
-import { marqueeText, email, transitionDuration } from "consts";
+import { email } from "consts";
+
+import { themeAtom } from "data/atoms";
 
 import Title from "components/ui/Title";
 import Marquee from "components/ui/Marquee";
@@ -12,9 +15,10 @@ import StartJourney from "components/ui/StartJourney";
 import styles from "./overlay.module.css";
 
 const Overlay = ({ className, ...props }) => {
+  const [theme] = useAtom(themeAtom)
+
   const [breakpointFirst, setBreakpointFirst] = useState(false);
   const [breakpointSecond, setBreakpointSecond] = useState(false);
-  const [breakpointSecondDelay, setBreakpointSecondDelay] = useState(false);
 
   useEffect(() => {
     const scrollSnap = document.getElementById("scrollSnap");
@@ -61,7 +65,7 @@ const Overlay = ({ className, ...props }) => {
           <Marquee
             className={clsx(styles.marquee, breakpointFirst && styles.hidden)}
           >
-            {marqueeText}
+            INFLUENCER MARKETING AGENCY
           </Marquee>
         </div>
 
@@ -74,7 +78,7 @@ const Overlay = ({ className, ...props }) => {
           <div
             className={clsx(styles.contacts, breakpointFirst && styles.hidden)}
           >
-            <Link href={`mailto:${email}`}>{email}</Link>
+            <Link className={clsx(styles.link, styles[theme])} href={`mailto:${email}`}>{email}</Link>
           </div>
           <div className={clsx(styles.hint, breakpointSecond && styles.hidden)}>
             swipe down
@@ -90,7 +94,7 @@ const Overlay = ({ className, ...props }) => {
           className={clsx(
             styles.startJourneyWrapper,
             breakpointFirst && styles.center,
-            breakpointSecond && styles.scale,
+            breakpointSecond && styles.scale
           )}
         >
           <StartJourney

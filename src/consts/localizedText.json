@@ -4,13 +4,27 @@
     "slidersText": "300+ инфлюенсеров со всего мира в 10+ категорий на расстоянии одного клика",
     "compassText": "Берем все заботы на себя: от первых идей до проработанной стратегии продвижения",
     "trendingUpText": "Удобные IT-системы для подбора инфлюенсеров и отслеживания статистики рекламных кампаний",
-    "contacts": "Контакты"
+    "contacts": "Контакты",
+    "namePlaceholder": "Имя",
+    "eMailPlaceholder": "Email",
+    "messagePlaceholder": "Сообщение",
+    "agree": "Согласен с",
+    "policy": "политикой обработки персональных данных",
+    "submit": "Отправить заявку",
+    "tel": "Тел"
   },
   "eng": {
     "aboutUs": "About us",
     "slidersText": "300+ influencers from all over the world in 10+ categories just a click away",
     "compassText": "We take care of everything: from the first ideas to a well-developed promotion strategy",
     "trendingUpText": "Convenient IT systems for selecting influencers and tracking statistics of advertising campaigns",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "namePlaceholder": "Name",
+    "eMailPlaceholder": "Email",
+    "messagePlaceholder": "Message",
+    "agree": "I agree to the",
+    "policy": "data usage policy",
+    "submit": "Submit",
+    "tel": "Tel"
   }
 }

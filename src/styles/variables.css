@@ -8,6 +8,7 @@
   --border-radius: 12px;
 
   --font-size: 20px;
+  --title-font-size: 4rem;
   --font-family: CraftworkGrotesk, sans-serif;
 
   --transition-duration: 0.25s;
@@ -34,5 +35,6 @@
   :root {
     --scale-size: 75;
     --font-size: 16px;
+    --title-font-size: 2rem;
   }
 }

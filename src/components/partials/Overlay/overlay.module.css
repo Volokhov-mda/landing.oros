@@ -28,10 +28,6 @@
   transition-duration: var(--transition-duration);
 }
 
-.startJourneyWrapper {
-  /* transition-delay: 1s; */
-}
-
 .title,
 .marquee,
 .hint {
@@ -101,7 +97,20 @@
   justify-content: flex-end;
 }
 
+.link {
+  padding-bottom: 0.25rem;
+}
+
+.link.dark {
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.link.light {
+  border-bottom: 1px solid var(--primary-color);
+}
+
 .hint {
+  white-space: nowrap;
   user-select: none;
   cursor: default;
 }

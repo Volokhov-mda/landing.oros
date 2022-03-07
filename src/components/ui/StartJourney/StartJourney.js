@@ -3,7 +3,9 @@ import { useAtom } from "jotai";
 
 import { themeAtom } from "data/atoms";
 
-import { ReactComponent as Logo } from "images/logos/logo.svg";
+import logo from "images/logos/logo.svg";
+
+import Icon from "components/ui/Icon";
 
 import styles from "./start-journey.module.css";
 
@@ -18,7 +20,7 @@ const StartJourney = ({ showButton, className, ...props }) => {
         Start <br /> Journey
       </button>
       <div className={styles.logoWrapper}>
-        <Logo className={styles.logo} />
+        <Icon icon={logo} className={styles.logo} />
       </div>
     </div>
   );

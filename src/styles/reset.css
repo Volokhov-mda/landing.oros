@@ -135,9 +135,10 @@ button {
 }
 
 button {
-  border: none;
+  border: unset;
+  padding: unset;
   cursor: pointer;
-  background: none;
+  background: unset;
   color: #fff;
 }
 
