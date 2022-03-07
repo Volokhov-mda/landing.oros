@@ -23,8 +23,6 @@ const Overlay = ({ className, ...props }) => {
   const [breakpointFirst, setBreakpointFirst] = useState(false);
   const [breakpointSecond, setBreakpointSecond] = useState(false);
 
-  console.log(styles[language]);
-
   const handleChangeLanguage = () =>
     setLanguage(language === "eng" ? "ru" : "eng");
 
