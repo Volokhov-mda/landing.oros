@@ -35,20 +35,19 @@ const Home = () => {
     <ScrollSnap id="scrollSnap">
       <div className={styles.content}>
         <Overlay />
-        <ScrollSnap.Screen className={styles.screen} snap />
-        <ScrollSnap.Screen className={styles.screen} snap />
+        <ScrollSnap.Screen className={styles.screen} height="100vh" snap />
+        <ScrollSnap.Screen className={styles.screen} height="100vh" snap />
         <ScrollSnap.Screen
           className={clsx(
             styles.screen,
-            styles.primaryPalette,
+            styles.scrollInfo,
             !breakpoint && styles.hidden
           )}
-          height={window.innerWidth <= 1000 ? "200vh" : "265vh"}
           snap={window.innerWidth <= 1000}
         >
           <ScrollInfo />
         </ScrollSnap.Screen>
-        <ScrollSnap.Screen className={styles.screen} snap>
+        <ScrollSnap.Screen className={styles.screen} minHeight="100vh" snap>
           <Contacts />
         </ScrollSnap.Screen>
       </div>

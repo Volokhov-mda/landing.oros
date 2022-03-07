@@ -19,8 +19,8 @@ const Contacts = ({ className, ...props }) => {
   return (
     <div className={className} {...props}>
       <Title className={styles.title}>{localizedText[language].contacts}</Title>
-      <Form />
-      <Footer />
+      <Form className={styles.form} />
+      <Footer className={styles.footer} />
     </div>
   );
 };

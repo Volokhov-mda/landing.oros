@@ -89,4 +89,8 @@
   .infoWrapper > * {
     scroll-snap-align: unset;
   }
+
+  .round {
+    bottom: -15%;
+  }
 }

@@ -21,3 +21,13 @@
 .screen.hidden {
   opacity: 0;
 }
+
+.scrollInfo {
+  margin-bottom: 10rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .scrollInfo {
+    padding-bottom: 25rem;
+  }
+}

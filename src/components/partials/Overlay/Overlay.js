@@ -4,7 +4,7 @@ import { useAtom } from "jotai";
 
 import { email } from "consts";
 
-import { themeAtom } from "data/atoms";
+import { languageAtom, themeAtom } from "data/atoms";
 
 import Title from "components/ui/Title";
 import Marquee from "components/ui/Marquee";
@@ -15,10 +15,14 @@ import StartJourney from "components/ui/StartJourney";
 import styles from "./overlay.module.css";
 
 const Overlay = ({ className, ...props }) => {
-  const [theme] = useAtom(themeAtom)
+  const [theme] = useAtom(themeAtom);
+  const [language, setLanguage] = useAtom(languageAtom);
 
   const [breakpointFirst, setBreakpointFirst] = useState(false);
   const [breakpointSecond, setBreakpointSecond] = useState(false);
+
+  const handleChangeLanguage = () =>
+    setLanguage(language === "eng" ? "ru" : "eng");
 
   useEffect(() => {
     const scrollSnap = document.getElementById("scrollSnap");
@@ -78,7 +82,12 @@ const Overlay = ({ className, ...props }) => {
           <div
             className={clsx(styles.contacts, breakpointFirst && styles.hidden)}
           >
-            <Link className={clsx(styles.link, styles[theme])} href={`mailto:${email}`}>{email}</Link>
+            <Link
+              className={clsx(styles.link, styles[theme])}
+              href={`mailto:${email}`}
+            >
+              {email}
+            </Link>
           </div>
           <div className={clsx(styles.hint, breakpointSecond && styles.hidden)}>
             swipe down
@@ -86,7 +95,9 @@ const Overlay = ({ className, ...props }) => {
           <div
             className={clsx(styles.controls, breakpointFirst && styles.hidden)}
           >
-            <FloatingButton>Eng</FloatingButton>
+            <FloatingButton onClick={handleChangeLanguage}>
+              {capitalizeFirstChar(language)}
+            </FloatingButton>
           </div>
         </div>
 
@@ -109,5 +120,8 @@ const Overlay = ({ className, ...props }) => {
     </div>
   );
 };
+
+const capitalizeFirstChar = (string) =>
+    string.charAt(0).toUpperCase() + string.slice(1);
 
 export default Overlay;

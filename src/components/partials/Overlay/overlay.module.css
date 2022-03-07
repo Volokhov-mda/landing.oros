@@ -61,6 +61,7 @@
 
 .title {
   padding-top: 3rem;
+  
 }
 
 .marquee {
@@ -141,9 +142,27 @@
 }
 
 @media screen and (max-width: 1000px) {
+  .title {
+    padding-top: 1rem;
+  }
+
+  .startJourneyWrapper {
+    bottom: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    padding-top: 3rem;
+  }
+
   .floatingMenu {
     bottom: 2rem;
     align-items: flex-end;
+  }
+
+  .startJourneyWrapper {
+    bottom: 8.75rem;
   }
 
   .hint {

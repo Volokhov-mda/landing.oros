@@ -5,11 +5,12 @@
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  scroll-snap-stop: always;
+  /* scroll-snap-stop: always; */
 }
 
 .screen {
-  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .screen.snap {

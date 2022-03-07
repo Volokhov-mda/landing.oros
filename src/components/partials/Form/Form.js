@@ -19,7 +19,7 @@ const Form = ({ className, ...props }) => {
   className = clsx(styles.form, className);
 
   return (
-    <form {...props}>
+    <form className={className} {...props}>
       <div className={styles.inputs}>
         <Input placeholder={localizedText[language].namePlaceholder} />
         <Input placeholder={localizedText[language].eMailPlaceholder} />

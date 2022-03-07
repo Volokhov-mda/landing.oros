@@ -13,7 +13,8 @@ const ScrollSnap = ({ className, children, ...props }) => {
 };
 
 ScrollSnap.Screen = ({
-  height = "100vh",
+  height,
+  minHeight = "100vh",
   snap,
   style,
   className,
@@ -23,7 +24,7 @@ ScrollSnap.Screen = ({
   className = clsx(styles.screen, snap && styles.snap, className);
 
   return (
-    <div className={className} style={{ height, minHeight: height, ...style }} {...props}>
+    <div className={className} style={{ height, minHeight, ...style }} {...props}>
       {children}
     </div>
   );
