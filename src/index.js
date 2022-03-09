@@ -1,5 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { ClientContextProvider } from "react-fetching-library";
+
+import { client } from "api/client";
 
 import App from "components/partials/App";
 
@@ -9,8 +12,10 @@ import "./styles/reset.css";
 import "./styles/global.css";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ClientContextProvider client={client}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </ClientContextProvider>,
   document.getElementById("root")
 );

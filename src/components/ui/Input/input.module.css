@@ -1,4 +1,5 @@
 .input {
+  width: 100%;
   border: none;
   padding-bottom: 1rem;
   background-color: transparent;
@@ -21,4 +22,19 @@
 
 .input.light {
   border-bottom: 1px solid var(--primary-color);
+}
+
+.input,
+.input::placeholder {
+  transition-property: color, border-color;
+  transition-duration: var(--transition-duration);
+}
+
+.input.error {
+  color: var(--danger-color);
+  border-color: var(--danger-color);
+}
+
+.input.error::placeholder {
+  color: var(--danger-color);
 }

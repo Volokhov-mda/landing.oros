@@ -40,3 +40,7 @@
 .text {
   margin-left: 1rem;
 }
+
+.label.error {
+  color: var(--danger-color);
+}
