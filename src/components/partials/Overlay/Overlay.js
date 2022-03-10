@@ -8,11 +8,14 @@ import localizedText from "consts/localizedText.json";
 
 import { languageAtom, themeAtom } from "data/atoms";
 
+import swipeDown from "images/icons/swipe-down.svg"
+
 import Title from "components/ui/Title";
 import Marquee from "components/ui/Marquee";
 import Link from "components/ui/Link";
 import FloatingButton from "components/ui/FloatingButton";
 import StartJourney from "components/ui/StartJourney";
+import Icon from "components/ui/Icon";
 
 import styles from "./overlay.module.css";
 
@@ -26,7 +29,7 @@ const Overlay = ({ className, ...props }) => {
   const handleChangeLanguage = () =>
     setLanguage(language === "eng" ? "ru" : "eng");
 
-  const handleScroll = () => {
+  const handleScrollJourney = () => {
     const scrollSnap = document.getElementById("scrollSnap");
     const scrollInfoScreen = document.getElementById("scroll-info");
 
@@ -34,6 +37,26 @@ const Overlay = ({ className, ...props }) => {
       top: scrollInfoScreen.offsetTop,
       behavior: "smooth",
     });
+  };
+
+  const handleSwipeDown = () => {
+    const scrollSnap = document.getElementById("scrollSnap");
+    const secondScreen = document.getElementById("start-journey");
+
+    if (!breakpointFirst) {
+      scrollSnap.scrollTo({
+        top: secondScreen.offsetTop,
+        behavior: "smooth",
+      });
+    } else {
+      handleScrollJourney();
+    }
+  };
+
+  const getLanguageButtontext = () => {
+    const text = language === "ru" ? "eng" : "ru";
+
+    return text.charAt(0).toUpperCase() + text.slice(1);
   };
 
   useEffect(() => {
@@ -50,15 +73,18 @@ const Overlay = ({ className, ...props }) => {
       }
 
       if (scrollTop > window.innerHeight * 1.3) {
-        document.body.style.backgroundColor = theme === "light" ? "var(--primary-color)" : "var(--secondary-color)";
+        document.body.style.backgroundColor =
+          theme === "light" ? "var(--primary-color)" : "var(--secondary-color)";
         setBreakpointSecond(true);
       } else {
-        document.body.style.backgroundColor = theme === "light" ? "var(--secondary-color)" : "var(--primary-color)";
+        document.body.style.backgroundColor =
+          theme === "light" ? "var(--secondary-color)" : "var(--primary-color)";
         setBreakpointSecond(false);
       }
-      
+
       if (scrollTop >= contactsScreen.offsetTop - 550) {
-        document.body.style.backgroundColor = theme === "light" ? "var(--secondary-color)" : "var(--primary-color)";
+        document.body.style.backgroundColor =
+          theme === "light" ? "var(--secondary-color)" : "var(--primary-color)";
       }
     };
 
@@ -108,14 +134,17 @@ const Overlay = ({ className, ...props }) => {
               {email}
             </Link>
           </div>
-          <div className={clsx(styles.hint, breakpointSecond && styles.hidden)}>
-            {localizedText[language].swipeDown}
-          </div>
+          <button
+            className={clsx(styles.hint, breakpointSecond && styles.hidden)}
+            onClick={handleSwipeDown}
+          >
+            {localizedText[language].swipeDown} <Icon className={styles.swipeDownIcon} icon={swipeDown} />
+          </button>
           <div
             className={clsx(styles.controls, breakpointFirst && styles.hidden)}
           >
             <FloatingButton onClick={handleChangeLanguage}>
-              {capitalizeFirstChar(language)}
+              {getLanguageButtontext(language === "ru" ? "eng" : "ru")}
             </FloatingButton>
           </div>
         </div>
@@ -130,7 +159,7 @@ const Overlay = ({ className, ...props }) => {
         >
           <StartJourney
             showButton={breakpointFirst}
-            onClick={handleScroll}
+            onClick={handleScrollJourney}
             className={clsx(
               styles.startJourney,
               breakpointSecond && styles.hidden
@@ -141,8 +170,5 @@ const Overlay = ({ className, ...props }) => {
     </div>
   );
 };
-
-const capitalizeFirstChar = (string) =>
-  string.charAt(0).toUpperCase() + string.slice(1);
 
 export default Overlay;

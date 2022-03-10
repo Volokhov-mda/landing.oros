@@ -1,0 +1,26 @@
+.backButton {
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  width: 0.9rem;
+  margin-right: 1rem;
+  transition: transform var(--transition-duration);
+}
+
+.arrow.dark {
+  filter: invert(1);
+}
+
+.arrow.light {
+  filter: var(--filter-to-primary-color)
+}
+
+.backButton:hover > .arrow {
+  transform: translateX(-1px);
+}
+
+.logo {
+  width: 3.5rem;
+}

@@ -8,7 +8,15 @@
   background-color: var(--primary-color);
 }
 
+.app.dark a {
+  color: var(--secondary-color);
+}
+
 .app.light {
   color: var(--primary-color);
   background-color: var(--secondary-color);
+}
+
+.app.light a {
+  color: var(--primary-color);
 }

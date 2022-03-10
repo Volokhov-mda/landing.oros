@@ -1,0 +1,15 @@
+.title {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  white-space: normal;
+  line-height: 1.5rem;
+}
+
+.text {
+  display: grid;
+  gap: .5rem;
+  margin-top: 0.8rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1rem;
+}

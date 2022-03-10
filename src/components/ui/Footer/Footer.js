@@ -6,9 +6,7 @@ import { languageAtom, themeAtom } from "data/atoms";
 import { email, telNumber } from "consts";
 import localizedText from "consts/localizedText.json";
 
-import logo from "images/logos/logo.svg";
-
-import Icon from "components/ui/Icon";
+import Logo from "components/ui/Logo";
 import Link from "components/ui/Link";
 
 import styles from "./footer.module.css";
@@ -20,7 +18,7 @@ const Footer = ({ className, ...props }) => {
   className = clsx(styles.footer, styles[theme], className);
   return (
     <footer className={className} {...props}>
-      <Icon icon={logo} className={styles.logo} />
+      <Logo className={styles.logo} />
       <div className={styles.contacts}>
         <Link href={`mailto:${email}`}>{email}</Link>
         <Link href={`tel:${formatTelNumber(telNumber)}`}>

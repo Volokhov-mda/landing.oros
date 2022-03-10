@@ -26,6 +26,8 @@ const Home = () => {
 
     scrollSnap.addEventListener("scroll", onScroll);
 
+    document.body.style.overflow = "hidden";
+
     return () => {
       scrollSnap.removeEventListener("scroll", onscroll);
     };
@@ -36,7 +38,12 @@ const Home = () => {
       <div className={styles.content}>
         <Overlay />
         <ScrollSnap.Screen className={styles.screen} height="100vh" snap />
-        <ScrollSnap.Screen className={styles.screen} height="100vh" snap />
+        <ScrollSnap.Screen
+          id="start-journey"
+          className={styles.screen}
+          height="100vh"
+          snap
+        />
         <ScrollSnap.Screen
           id="scroll-info"
           className={clsx(
@@ -48,7 +55,12 @@ const Home = () => {
         >
           <ScrollInfo />
         </ScrollSnap.Screen>
-        <ScrollSnap.Screen id="contacts-screen" className={styles.screen} minHeight="100vh" snap>
+        <ScrollSnap.Screen
+          id="contacts-screen"
+          className={styles.screen}
+          minHeight="100vh"
+          snap
+        >
           <Contacts />
         </ScrollSnap.Screen>
       </div>

@@ -5,9 +5,7 @@ import { languageAtom, themeAtom } from "data/atoms";
 
 import localizedText from "consts/localizedText.json";
 
-import logo from "images/logos/logo.svg";
-
-import Icon from "components/ui/Icon";
+import Logo from "components/ui/Logo";
 
 import styles from "./start-journey.module.css";
 import { useMemo } from "react";
@@ -37,7 +35,7 @@ const StartJourney = ({ showButton, onClick, className, ...props }) => {
         })}
       </button>
       <div className={styles.logoWrapper}>
-        <Icon icon={logo} className={styles.logo} />
+        <Logo className={styles.logo} />
       </div>
     </div>
   );

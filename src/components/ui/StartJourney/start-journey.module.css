@@ -69,13 +69,4 @@
 
 .logo {
   width: 100%;
-  height: 100%;
-}
-
-.startJourney.dark .logo {
-  filter: invert(1);
-}
-
-.startJourney.light .logo {
-  filter: var(--filter-to-primary-color);
 }

@@ -1,0 +1,281 @@
+{
+  "ru": [
+    {
+      "title": "1. НАЗНАЧЕНИЕ И ОБЛАСТЬ ДЕЙСТВИЯ",
+      "texts": [
+        {
+          "value": "1.1. Настоящий документ (далее — Политика) определяет цели и общие принципы обработки персональных данных, а также реализуемые меры защиты персональных данных на сайте <a href=\"https://orosdigital.agency\">https://orosdigital.agency</a> (далее — OROSDIGITAL). Политика является общедоступным документом OROSDIGITAL и предусматривает возможность ознакомления с ней любых лиц."
+        },
+        {
+          "value": "1.2. Политика действует бессрочно после утверждения и до ее замены новой версией."
+        },
+        {
+          "value": "1.3. В Политике используются термины и определения в соответствии с их значениями, как они определены в ФЗ-152 \"О персональных данных\"."
+        }
+      ]
+    },
+    {
+      "title": "2. СВЕДЕНИЯ ОБ ОБРАБОТКЕ ПЕРСОНАЛЬНЫХ ДАННЫХ",
+      "texts": [
+        {
+          "value": "2.1. Обработка персональных данных OROSDIGITAL ведется с использованием средств автоматизации."
+        },
+        {
+          "value": "2.2. Действия с персональными данными включают сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передача (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных."
+        },
+        {
+          "value": "2.3. Обработка персональных данных осуществляется OROSDIGITAL на законной и справедливой основе, правовыми основания для обработки являются:",
+          "list": [
+            "Конституция Российской Федерации;",
+            "Гражданский кодекс Российской Федерации;",
+            "Федеральный закон от 27.07.2006г. № 152-ФЗ \"О персональных данных\";"
+          ]
+        },
+        {
+          "value": "2.4. Содержание и объем обрабатываемых персональных определяются исходя из целей обработки. Не обрабатываются персональные данные, избыточные или несовместимые по отношению к следующим основным целям:",
+          "list": [
+            "предоставление клиенту консультаций, информации, услуг посредничества;",
+            "подписание с клиентом договора и выполнения его условий;",
+            "подтверждения достоверности и полноты персональных данных, предоставленных клиентом;",
+            "предоставления клиенту эффективной клиентской и технической поддержки при возникновении проблем связанных с использованием сайта;",
+            "установления с клиентом обратной связи, включая направление уведомлений, запросов, касающихся использования сайта, оказания услуг, обработка запросов и заявок от клиента;"
+          ]
+        },
+        {
+          "value": "2.5. К основным категориям субъектов персональных данных, чьи данные обрабатываются OROSDIGITAL, относятся:",
+          "list": [
+            "физические лица;",
+            "индивидуальные предприниматели;",
+            "юридические лица"
+          ]
+        },
+        {
+          "value": "2.6. Информация, которую Вы самостоятельно предоставляете при регистрации или авторизации, а также в процессе дальнейшего использования сайта, включая персональные данные. Обязательная для предоставления услуг информация явно обозначена. К такой информации отнесены: имя, фамилия и отчество, адрес электронной почты, контактный телефон, год, месяц и дата рождения, место регистрации, социальное положение, образование и профессия."
+        },
+        {
+          "value": "2.7. Данные, которые передаются в автоматическом режиме в зависимости от настроек используемого Вами программного обеспечения, включая IP-адрес, cookie, данные об используемом оборудовании, параметрах и настройках браузера, операционной системе, URL-адресе, с которого был осуществлён переход, просмотры страниц, время доступа и Ваше местонахождение. Эта информация привязана к устройству, которым Вы пользуетесь для доступа к услугам."
+        },
+        {
+          "value": "2.8. При обработке обеспечиваются точность персональных данных, их достаточность и актуальность по отношению к целям обработки персональных данных. При обнаружении неточных или неполных персональных данных производится их уточнение и актуализация."
+        },
+        {
+          "value": "2.9. Для персональных данных, не являющихся общедоступными, обеспечивается конфиденциальность."
+        },
+        {
+          "value": "2.10. Обработка и хранение персональных данных осуществляются не дольше, чем этого требуют цели обработки персональных данных, если отсутствуют законные основания для дальнейшей обработки, например, если федеральным законом или договором с субъектом персональных данных не установлен соответствующий срок хранения."
+        }
+      ]
+    },
+    {
+      "title": "3. МЕРЫ ПО ОБЕСПЕЧЕНИЮ БЕЗОПАСНОСТИ ПЕРСОНАЛЬНЫХ ДАННЫХ",
+      "texts": [
+        {
+          "value": "3.1. OROSDIGITAL предпринимает необходимые правовые, организационные и технические меры для обеспечения безопасности персональных данных для их защиты от несанкционированного (в том числе, случайного) доступа, уничтожения, изменения, блокирования доступа и других несанкционированных действий. К таким мерам, в частности, относятся:",
+          "list": [
+            "назначение сотрудников, ответственных за организацию обработки и обеспечение безопасности персональных данных;",
+            "проверка наличия в договорах и включение при необходимости в договоры пунктов об обеспечении конфиденциальности персональных данных;",
+            "издание локальных актов по вопросам обработки персональных данных, ознакомление с ними работников, обучение клиентов;",
+            "применение средств обеспечения информационной безопасности."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "4. ПРАВА СУБЪЕКТОВ ПЕРСОНАЛЬНЫХ ДАННЫХ",
+      "texts": [
+        {
+          "value": "4.1. Субъект персональных данных имеет право отозвать согласие на обработку персональных данных, направив соответствующий запрос OROSDIGITAL по почте или обратившись лично."
+        },
+        {
+          "value": "4.2. Субъект персональных данных имеет право на получение информации, касающейся обработки его персональных данных, в том числе содержащей:",
+          "list": [
+            "подтверждение факта обработки персональных данных OROSDIGITAL;",
+            "правовые основания и цели обработки персональных данных;",
+            "цели и применяемые OROSDIGITAL способы обработки персональных данных;",
+            "наименование и место нахождения OROSDIGITAL, сведения о лицах (за исключением сотрудников/работников OROSDIGITAL), которые имеют доступ к персональным данным или которым могут быть раскрыты персональные данные на основании договора с OROSDIGITAL или на основании федерального закона;",
+            "обрабатываемые персональные данные, относящиеся к соответствующему субъекту персональных данных, источник их получения, если иной порядок представления таких данных не предусмотрен федеральным законом;",
+            "сроки обработки персональных данных, в том числе сроки их хранения;",
+            "порядок осуществления субъектом персональных данных прав, предусмотренных Федеральным законом \"О персональных данных\";",
+            "информацию об осуществленной или о предполагаемой трансграничной передаче данных;",
+            "наименование или фамилию, имя, отчество и адрес лица, осуществляющего обработку персональных данных по поручению OROSDIGITAL, если обработка поручена или будет поручена такому лицу;",
+            "иные сведения, предусмотренные Федеральным законом \"О персональных данных\" или другими федеральными законами."
+          ]
+        },
+        {
+          "value": "4.3. Субъект персональных данных вправе требовать от OROSDIGITAL уточнения его персональных данных, их обезличивания или уничтожения в случае, если персональные данные являются неполными, устаревшими, неточными, незаконно полученными или не являются необходимыми для заявленной цели обработки, а также принимать предусмотренные законом меры по защите своих прав."
+        },
+        {
+          "value": "4.4. Субъект персональных данных имеет право на защиту своих прав и законных интересов, в том числе на возмещение убытков и (или) компенсацию морального вреда в судебном порядке."
+        }
+      ]
+    },
+    {
+      "title": "5. УСЛОВИЯ ОБРАБОТКИ ПЕРСОНАЛЬНОЙ ИНФОРМАЦИИ КЛИЕНТОВ И ЕЕ ПЕРЕДАЧИ ТРЕТЬИМ ЛИЦАМ",
+      "texts": [
+        {
+          "value": "5.1. OROSDIGITAL хранит персональную информацию клиентов в соответствии с внутренними регламентами."
+        },
+        {
+          "value": "5.2. В отношении персональной информации клиента сохраняется ее конфиденциальность, кроме случаев добровольного предоставления клиентом информации о себе для общего доступа неограниченному кругу лиц."
+        },
+        {
+          "value": "5.3. OROSDIGITAL вправе передать персональную информацию клиента третьим лицам в следующих случаях:",
+          "list": [
+            "клиент выразил согласие на такие действия;",
+            "передача предусмотрена российским или иным применимым законодательством в рамках установленной законодательством процедуры;",
+            "в случае продажи OROSDIGITAL к приобретателю переходят все обязательства по соблюдению условий настоящей Политики применительно к полученной им персональной информациию"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6. РОЛИ И ОТВЕТСТВЕННОСТЬ",
+      "texts": [
+        {
+          "value": "6.1. Права и обязанности клиента определяются действующим законодательством и соглашениями OROSDIGITAL."
+        },
+        {
+          "value": "6.2. Контроль исполнения требований настоящей Политики осуществляется ответственным за организацию обработки персональных данных."
+        },
+        {
+          "value": "6.3. Ответственность лиц, участвующих в обработке персональных данных на основании поручений OROSDIGITAL, за неправомерное использование персональных данных устанавливается в соответствии с условиями заключенного между OROSDIGITAL и сотрудником трудового или гражданско-правового договора или Соглашения о неразглашении конфиденциальной информации информации."
+        },
+        {
+          "value": "6.4. Лица, виновные в нарушении норм, регулирующих обработку и защиту персональных данных, несут материальную, дисциплинарную, административную, гражданско-правовую или уголовную ответственность в порядке, установленном федеральными законами, локальными актами, соглашениями OROSDIGITAL."
+        },
+        {
+          "value": "6.5. Политика разрабатывается ответственным за организацию обработки персональных данных и вводится в действие после утверждения руководителем OROSDIGITAL. Предложения и замечания для внесения изменений в Политику следует направлять по адресу. Политика пересматривается ежегодно для поддержания в актуальном состоянии и актуализируется по мере необходимости."
+        }
+      ]
+    },
+    {
+      "title": "7. КОНТАКТЫ ДЛЯ ОБРАЩЕНИЙ",
+      "texts": [
+        {
+          "value": "Индивидуальный предприниматель Орос Иван Андреевич <br /> ОГРНИП 320508100212853 <br /> ИНН 500913300512 <br /> Почта: <a href=\"mailto:contact@orosdigital.agency\">contact@orosdigital.agency</a>"
+        }
+      ]
+    }
+  ],
+  "eng": [
+    {
+      "title": "1. GENERAL",
+      "texts": [
+        {
+          "value": "1.1. Privacy and data protection is important to us at OROSDIGITAL, sole proprietor Oros Ivan Andreevich, reg. no 320508100212853 (\"OROSDIGITAL\", \"we\", \"us\" or \"our\"). This Privacy Policy aims to inform you as customer, supplier, contractor, employee etc. about our processing of your personal data, and what rights you have as a data subject. OROSDIGITAL's processing of personal data is carried out in accordance with applicable legislation, including the general data protection regulation (\"GDPR\")."
+        },
+        {
+          "value": "1.2. This Privacy Policy applies to the personal data we may process in connection with talent and customer engagements, business contacts and recruitments."
+        },
+        {
+          "value": "1.3. Set forth below is a description of how we process your personal data, and if you wish to receive additional information on the processing of your personal data, you are welcome to contact us at <a href=\"mailto:contact@orosdigital.agency\">contact@orosdigital.agency</a>"
+        }
+      ]
+    },
+    {
+      "title": "2. PERSONAL DATA WE PROCESS",
+      "texts": [
+        {
+          "value": "2.1. Personal data refers to information which, directly or indirectly, may be associated with a living natural person, such as name, personal identity number, IP address, payment details, photos, e-mail addresses, phone number and other contact details etc."
+        },
+        {
+          "value": "2.2. We process personal data about persons who:",
+          "list": [
+            "are a customer of OROSDIGITAL;",
+            "are a talent engaged by OROSDIGITAL;",
+            "are a representative and/or employee of a customer, business partner, potential customer, potential business partner or talent;",
+            "applies for a job at OROSDIGITAL or enter a business or legal relationship with OROSDIGITAL;",
+            "are an employee at OROSDIGITAL;",
+            "are otherwise affected by our services;",
+            "receives our newsletters, other communication and/or attend our events."
+          ]
+        },
+        {
+          "value": "2.3. We process personal data for the purposes of administrating and performing our services, managing customer and talent relationships, fulfilling our legal obligations, recruiting staff, entering business or legal relationships, improving and marketing our services and sending newsletters."
+        },
+        {
+          "value": "2.4. The personal data that OROSDIGITAL processes is either provided by you, the company which you represent or by a company which you have engaged, and which uses our services. We may also collect personal data from private and public registers as well as from public authorities."
+        },
+        {
+          "value": "2.5. We may also collect personal data from private and public registers, publicly accessible sources as well as from public authorities."
+        }
+      ]
+    },
+    {
+      "title": "3. LEGAL BASIS",
+      "texts": [
+        {
+          "value": "3.1. We process personal data when necessary to (i) provide our services and fulfill our obligations towards you in accordance with agreements and terms entered into, (ii) communicate with you, (iii) send out newsletters and/or offers about our services, (iv) direct market our services to potential company customers or business partners for which you act as a representative, (v) when we have your consent to process your personal data or (vi) when there is another legitimate interest for us to process your personal data. If we process your personal data for any specific purpose which requires your consent under the GDPR, or any other data protection legislation, we will obtain your consent in advance."
+        },
+        {
+          "value": "3.2. In order for us to provide direct marketing to a potential customer or business partner, pursuant to item (iv) in section 3.1 above, we may process personal data of representatives of such businesses, which we may collect from publicly accessible sources. Our legal ground for such processing is legitimate interest, pursuant to article 6.1 (f) of the GDPR, to market our services to such businesses. Before collecting the personal data for direct marketing purposes, we always and in each individual case conduct an assessment of interests pursuant to article 6.1 (f) of the GDPR, in order to for example evaluate whether our interest is overridden by the interests or fundamental rights and freedoms of the data subject which require protection of personal data. We only collect personal data if we, based on each such assessment of interests, make the assessment that our legal interest is not overridden by the interests and rights of the relevant data subject. You as a data subject have the right at any time to object to such processing in accordance with section 5.2.5 below."
+        },
+        {
+          "value": "3.3. Personal data will always be processed confidentially and protected by appropriate security measures. OROSDIGITAL ensures that companies that process and/or manage personal data on our behalf, uses a high level of security measures in order to protect your personal data."
+        },
+        {
+          "value": "3.4. We may disclose your personal data to external parties with whom we collaborate e.g. licensors, marketing agencies, e-mail service providers and database and website service controller; and providers etc. We may also disclose your personal data when we have a legal obligation to do so, e.g. due to anti-money laundering legislation, tax legislation, court orders or requests from government authorities."
+        },
+        {
+          "value": "3.5. We may transfer and store personal data in countries outside the EU/EEA in order to perform our services. When OROSDIGITAL transfers personal data to such countries, we will ensure that your personal data is adequately protected through the use of relevant safeguards."
+        }
+      ]
+    },
+    {
+      "title": "4. STORAGE AND DELETION OF PERSONAL DATA",
+      "texts": [
+        {
+          "value": "4.1. Personal data will only be stored for as long as it is necessary in order for us to fulfil the purposes of the processing, or for as long as we are required to store the information according to applicable legislation and relevant guidelines. The personal data is thereafter erased in accordance with our erasure procedure."
+        },
+        {
+          "value": "4.2. If we have collected your data for direct marketing purposes with legitimate interest as legal ground in accordance with section 3.2 above, we will not store your personal data for longer than one month before informing you about our processing of your data. You as a data subject have the right at any time to object to such processing in accordance with section 5.2.5 below."
+        },
+        {
+          "value": "4.3. You may unsubscribe from our newsletters or similar communication at any time. In such event we will no longer store or process your personal data for such purposes."
+        }
+      ]
+    },
+    {
+      "title": "5. YOUR RIGHTS AS A DATA SUBJECT",
+      "texts": [
+        {
+          "value": "5.1. OROSDIGITAL is the controller for the processing of your personal data, and as a data subject you have certain rights as regards your personal data. The rights are however not absolute, meaning that there are exceptions to some of the rights where we cannot proceed and fulfill your request."
+        },
+        {
+          "value": "5.2. As a data subject, you have the following rights:",
+          "list": [
+            "Right to withdraw your consent — meaning that you have the right to withdraw your consent where OROSDIGITAL process your personal data based on consent;",
+            "Right to access — meaning that you have the right to request a confirmation of our processing of your personal data, to receive information about the processing, access the personal data in question, and the right to obtain a copy of your personal data;",
+            "Right to rectification — meaning that you have the right to have any incorrect personal data about you as a data subject corrected by us;",
+            "Right to erasure — meaning that you have the right to have your personal data erased under certain circumstances. This right is limited, and we may be obligated to save your personal data in accordance with applicable law;",
+            "Right to object — meaning that you have the right to object to OROSDIGITAL's processing of your personal data under certain circumstances;",
+            "Right to restricted processing — meaning that you have the right to have OROSDIGITAL restrict the processing of your personal data, but not delete it; and",
+            "Right to data portability — meaning that you may request OROSDIGITAL to transfer your personal data to another data controller."
+          ]
+        },
+        {
+          "value": "5.3. If you feel that our processing of your personal data does not comply with applicable data protection legislation, you are entitled to lodge a complaint with the THE FEDERAL SERVICE FOR SUPERVISION OF COMMUNICATIONS, INFORMATION TECHNOLOGY, AND MASS MEDIA (Russian Federation authority)."
+        },
+        {
+          "value": "5.4. Any requests by you as a data subject under this Privacy Policy shall be sent to: <a href=\"mailto:contact@orosdigital.agency\">contact@orosdigital.agency</a>."
+        }
+      ]
+    },
+    {
+      "title": "6. LINKS TO THIRD PARTY SITES",
+      "texts": [
+        {
+          "value": "Our website, Google Forms, social media channels etc. may contain links to third party sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by OROSDIGITAL and, therefore, we strongly advise you to review the privacy policy of these websites. We have no control over, and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services."
+        }
+      ]
+    },
+    {
+      "title": "7. AMENDMENTS AND ADDITIONS",
+      "texts": [
+        {
+          "value": "OROSDIGITAL has the right to amend this Privacy Policy from time to time without giving prior notice to such change. The latest version will always be available on OROSDIGITAL's website: <a href=\"https://orosdigital.agency\">https://orosdigital.agency</a>, and we advise you to review this Privacy Policy periodically for any changes."
+        }
+      ]
+    }
+  ]
+}

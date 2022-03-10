@@ -1,0 +1,11 @@
+.logo {
+  width: 7.5rem;
+}
+
+.logo.liht {
+  filter: var(--filter-to-primary-color);
+}
+
+.logo.dark {
+  filter: invert(1);
+}
