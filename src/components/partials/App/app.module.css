@@ -1,5 +1,6 @@
 .app {
   width: 100%;
+  min-height: 100vh;
 }
 
 .app.dark {
@@ -10,10 +11,4 @@
 .app.light {
   color: var(--primary-color);
   background-color: var(--secondary-color);
-}
-
-.content {
-  min-height: 100vh;
-  margin: auto;
-  overflow: hidden;
 }

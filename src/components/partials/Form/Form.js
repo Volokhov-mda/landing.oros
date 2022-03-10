@@ -4,7 +4,7 @@ import { useAtom } from "jotai";
 
 import { addRow } from "api";
 
-import { languageAtom } from "data/atoms";
+import { languageAtom, themeAtom } from "data/atoms";
 
 import localizedText from "consts/localizedText.json";
 
@@ -20,6 +20,7 @@ import { useState } from "react";
 
 const Form = ({ className, ...props }) => {
   const [language] = useAtom(languageAtom);
+  const [theme] = useAtom(themeAtom);
   const [loading, setLoading] = useState(false);
 
   const {
@@ -44,7 +45,7 @@ const Form = ({ className, ...props }) => {
       alert(localizedText[language].requestFail);
       return;
     }
-    
+
     alert(localizedText[language].requestSuccess);
     reset();
   };
@@ -78,9 +79,9 @@ const Form = ({ className, ...props }) => {
         error={!!errors.policy}
       >
         {localizedText[language].agree}{" "}
-        <Link className={styles.policy} href="/agreement">
+        <Link.Route className={styles.policy} to="/agreement">
           {localizedText[language].policy}
-        </Link>
+        </Link.Route>
       </Checkbox>
 
       <Button type="submit" loading={loading}>

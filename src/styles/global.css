@@ -8,6 +8,6 @@ select {
 }
 
 body {
-  padding: env(safe-area-inset);
   overflow: hidden;
+  transition: background-color calc(var(--transition-duration) * 1);
 }

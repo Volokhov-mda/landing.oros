@@ -48,7 +48,7 @@ const Home = () => {
         >
           <ScrollInfo />
         </ScrollSnap.Screen>
-        <ScrollSnap.Screen className={styles.screen} minHeight="100vh" snap>
+        <ScrollSnap.Screen id="contacts-screen" className={styles.screen} minHeight="100vh" snap>
           <Contacts />
         </ScrollSnap.Screen>
       </div>

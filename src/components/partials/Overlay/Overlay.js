@@ -38,6 +38,7 @@ const Overlay = ({ className, ...props }) => {
 
   useEffect(() => {
     const scrollSnap = document.getElementById("scrollSnap");
+    const contactsScreen = document.getElementById("contacts-screen");
 
     const onScroll = () => {
       const scrollTop = scrollSnap.scrollTop;
@@ -48,10 +49,17 @@ const Overlay = ({ className, ...props }) => {
         setBreakpointFirst(true);
       }
 
-      if (scrollTop > window.innerHeight * 1.25) {
+      if (scrollTop > window.innerHeight * 1.75) {
+        document.body.style.backgroundColor = theme === "light" ? "var(--primary-color)" : "var(--secondary-color)";
         setBreakpointSecond(true);
       } else {
+        document.body.style.backgroundColor = theme === "light" ? "var(--secondary-color)" : "var(--primary-color)";
         setBreakpointSecond(false);
+      }
+      
+      if (scrollTop >= contactsScreen.offsetTop - 550) {
+        console.log(scrollTop, contactsScreen.scrollTop);
+        document.body.style.backgroundColor = theme === "light" ? "var(--secondary-color)" : "var(--primary-color)";
       }
     };
 
