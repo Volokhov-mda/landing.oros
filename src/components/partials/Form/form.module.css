@@ -18,6 +18,7 @@
 .button {
   display: flex;
   align-items: center;
+  height: 2.2rem;
   margin-top: 2.75rem;
   transition: opacity var(--transition-duration);
 }
@@ -35,6 +36,24 @@
 
 .button:hover .icon {
   transform: translateX(1px);
+}
+
+.loading {
+  animation: loading 2s infinite;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
+  
+  100% {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 500px) {
