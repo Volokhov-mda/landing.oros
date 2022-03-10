@@ -41,11 +41,11 @@ const Form = ({ className, ...props }) => {
     setLoading(false);
 
     if (!ok) {
-      alert("An unknown error occured. Contact us via email or phone.");
+      alert(localizedText[language].requestFail);
       return;
     }
-
-    alert("Form has been successfully submitted!");
+    
+    alert(localizedText[language].requestSuccess);
     reset();
   };
 
@@ -90,14 +90,19 @@ const Form = ({ className, ...props }) => {
   );
 };
 
-const Button = ({ loading, children, ...props }) =>
-  !loading ? (
+const Button = ({ loading, children, ...props }) => {
+  const [language] = useAtom(languageAtom);
+
+  return !loading ? (
     <button className={styles.button} {...props}>
       <span>{children}</span>
       <Icon className={styles.icon} icon={arrowRight} />
     </button>
   ) : (
-    <span className={clsx(styles.button, styles.loading)}>Loading...</span>
+    <span className={clsx(styles.button, styles.loading)}>
+      {localizedText[language].loading}
+    </span>
   );
+};
 
 export default Form;

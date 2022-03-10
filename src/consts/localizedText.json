@@ -13,6 +13,9 @@
     "agree": "Согласен с",
     "policy": "политикой обработки персональных данных",
     "submit": "Отправить заявку",
+    "loading": "Загрузка...",
+    "requestSuccess": "Заявка успешно отправлена!",
+    "requestFail": "Произошла неизвестная ошибка. Свяжитесь с нами по почте или телефону.",
     "tel": "Тел"
   },
   "eng": {
@@ -29,6 +32,9 @@
     "agree": "I agree to the",
     "policy": "data usage policy",
     "submit": "Submit",
+    "loading": "Loading...",
+    "requestSuccess": "Form has been successfully submitted!",
+    "requestFail": "An unknown error occured. Contact us via email or phone.",
     "tel": "Tel"
   }
 }
