@@ -17,7 +17,7 @@ const Home = () => {
     const onScroll = () => {
       const scrollTop = scrollSnap.scrollTop;
 
-      if (scrollTop < window.innerHeight * 1.8) {
+      if (scrollTop < window.innerHeight * 0.8) {
         setBreakpoint(false);
       } else {
         setBreakpoint(true);
@@ -38,12 +38,6 @@ const Home = () => {
       <div className={styles.content}>
         <Overlay />
         <ScrollSnap.Screen className={styles.screen} height="100vh" snap />
-        <ScrollSnap.Screen
-          id="start-journey"
-          className={styles.screen}
-          height="100vh"
-          snap
-        />
         <ScrollSnap.Screen
           id="scroll-info"
           className={clsx(

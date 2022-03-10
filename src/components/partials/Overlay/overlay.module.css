@@ -131,33 +131,26 @@
 .startJourneyWrapper {
   position: fixed;
   right: 50%;
-  transform: translateX(4rem);
+  transform: translateX(50%);
   bottom: 8.75rem;
   transition-property: transform, top, bottom, right, opacity;
   transition-duration: calc(var(--transition-duration) * 2);
 }
 
-.startJourneyWrapper.center {
+.startJourneyWrapper.scale {
+  pointer-events: none;
   right: 50%;
   bottom: 50%;
   transform: translate(50%, -50%);
 }
 
 .startJourneyWrapper.scale {
-  pointer-events: none;
+  transform: scale(var(--scale-size)) translate(15%, -7%);
 }
 
-.startJourneyWrapper.scale.ru {
-  transform: scale(var(--scale-size)) translate(-17.5%, -7%);
-}
-
-.startJourneyWrapper.scale.eng {
-  transform: scale(var(--scale-size)) translate(-10.5%, -7%);
-}
-
-.startJourney.hidden {
+.logo.hidden {
   transition: opacity calc(var(--transition-duration) * 2)
-    calc(var(--transition-duration) * 4);
+    calc(var(--transition-duration) * 3);
 }
 
 @keyframes swipeDown {
