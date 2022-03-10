@@ -17,7 +17,7 @@ const Home = () => {
     const onScroll = () => {
       const scrollTop = scrollSnap.scrollTop;
 
-      if (scrollTop < window.innerHeight * 0.8) {
+      if (scrollTop < window.innerHeight * 0.95) {
         setBreakpoint(false);
       } else {
         setBreakpoint(true);
