@@ -17,7 +17,7 @@ const StartJourney = ({ showButton, onClick, className, ...props }) => {
   const [language] = useAtom(languageAtom);
 
   const startJourneyText = useMemo(() => {
-    return localizedText[language].startJourney.split(/(?=[ ])|(?<=[ ])/g);
+    return localizedText[language].startJourney.split(" ");
   }, [language]);
 
   className = clsx(styles.startJourney, styles[theme], className);
@@ -29,8 +29,8 @@ const StartJourney = ({ showButton, onClick, className, ...props }) => {
         className={clsx(styles.button, !showButton && styles.hidden)}
       >
         {startJourneyText.map((value, i) => {
-          if (value === " ") {
-            return <br key={i} />;
+          if (i !== startJourneyText.length - 1) {
+            return [value, <br key={i} />];
           }
 
           return value;
