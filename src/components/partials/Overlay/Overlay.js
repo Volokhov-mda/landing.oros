@@ -28,7 +28,7 @@ const Overlay = ({ className, ...props }) => {
   const handleChangeLanguage = () =>
     setLanguage(language === "eng" ? "ru" : "eng");
 
-  const handleScrollJourney = () => {
+  const handleScrollToInfo = () => {
     const scrollSnap = document.getElementById("scrollSnap");
     const scrollInfoScreen = document.getElementById("scroll-info");
 
@@ -36,20 +36,6 @@ const Overlay = ({ className, ...props }) => {
       top: scrollInfoScreen.offsetTop,
       behavior: "smooth",
     });
-  };
-
-  const handleSwipeDown = () => {
-    const scrollSnap = document.getElementById("scrollSnap");
-    const secondScreen = document.getElementById("start-journey");
-
-    if (!breakpointFirst) {
-      scrollSnap.scrollTo({
-        top: secondScreen.offsetTop,
-        behavior: "smooth",
-      });
-    } else {
-      handleScrollJourney();
-    }
   };
 
   const getLanguageButtontext = () => {
@@ -133,7 +119,7 @@ const Overlay = ({ className, ...props }) => {
           </div>
           <button
             className={clsx(styles.hint, breakpointFirst && styles.hidden)}
-            onClick={handleSwipeDown}
+            onClick={handleScrollToInfo}
           >
             {localizedText[language].swipeDown}{" "}
             <Icon className={styles.swipeDownIcon} icon={swipeDown} />
