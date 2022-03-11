@@ -27,6 +27,7 @@ const Home = () => {
     scrollSnap.addEventListener("scroll", onScroll);
 
     document.body.style.overflow = "hidden";
+    window.document.title = "Oros Digital — Influencer Marketing Agency";
 
     return () => {
       scrollSnap.removeEventListener("scroll", onscroll);

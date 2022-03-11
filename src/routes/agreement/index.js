@@ -16,6 +16,7 @@ const Agreement = ({ className, ...props }) => {
 
   useEffect(() => {
     document.body.style.overflow = "auto";
+    window.document.title = "Privacy Policy — Oros Digital";
   }, []);
 
   className = clsx(styles.agreement, className);

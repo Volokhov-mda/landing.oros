@@ -4,7 +4,7 @@ import { useAtom } from "jotai";
 
 import { addRow } from "api";
 
-import { languageAtom, themeAtom } from "data/atoms";
+import { languageAtom } from "data/atoms";
 
 import localizedText from "consts/localizedText.json";
 
@@ -20,7 +20,6 @@ import { useState } from "react";
 
 const Form = ({ className, ...props }) => {
   const [language] = useAtom(languageAtom);
-  const [theme] = useAtom(themeAtom);
   const [loading, setLoading] = useState(false);
 
   const {

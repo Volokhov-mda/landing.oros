@@ -82,7 +82,7 @@ const Overlay = ({ className, ...props }) => {
         setBreakpointSecond(false);
       }
 
-      if (scrollTop >= contactsScreen.offsetTop - 550) {
+      if (scrollTop >= contactsScreen.offsetTop - 500) {
         document.body.style.backgroundColor =
           theme === "light" ? "var(--secondary-color)" : "var(--primary-color)";
       }

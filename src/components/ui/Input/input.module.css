@@ -4,6 +4,7 @@
   padding-bottom: 1rem;
   background-color: transparent;
   font-size: 1rem;
+  box-sizing: border-box;
 }
 
 .input.dark,
