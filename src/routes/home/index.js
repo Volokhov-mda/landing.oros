@@ -58,7 +58,7 @@ const Home = () => {
         </ScrollSnap.Screen>
         <ScrollSnap.Screen
           id="contacts-screen"
-          className={styles.screen}
+          className={clsx(styles.screen, styles.contacts)}
           minHeight="100vh"
           snap
         >

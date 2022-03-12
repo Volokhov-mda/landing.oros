@@ -88,6 +88,7 @@
 
   .infoWrapper > * {
     scroll-snap-align: center;
+    height: 50vh;
   }
   
   .infoWrapper > *:first-child {

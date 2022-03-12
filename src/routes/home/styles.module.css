@@ -5,7 +5,6 @@
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  scroll-snap-stop: always;
 }
 
 .content {
@@ -13,6 +12,7 @@
 }
 
 .screen {
+  scroll-snap-stop: always;
   transition: opacity calc(var(--transition-duration) * 2);
   transition-delay: var(--transition-duration);
   opacity: 1;
