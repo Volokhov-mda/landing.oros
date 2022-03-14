@@ -56,13 +56,15 @@
     padding: 2rem;
   }
 
-  .iconWrapper {
-    width: 9rem;
-    height: auto;
-  }
-
   .text {
     margin-top: 2rem;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .iconWrapper {
+    width: 9rem;
+    height: auto;
   }
 }

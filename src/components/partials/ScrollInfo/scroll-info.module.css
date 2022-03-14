@@ -88,7 +88,6 @@
 
   .infoWrapper > * {
     scroll-snap-align: center;
-    height: 50vh;
   }
   
   .infoWrapper > *:first-child {
@@ -97,5 +96,11 @@
 
   .round {
     bottom: -15%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .infoWrapper > * {
+    height: 50vh;
   }
 }
