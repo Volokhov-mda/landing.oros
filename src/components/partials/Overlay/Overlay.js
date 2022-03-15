@@ -8,7 +8,7 @@ import localizedText from "consts/localizedText.json";
 
 import { languageAtom, themeAtom } from "data/atoms";
 
-import swipeDown from "images/icons/swipe-down.svg"
+import swipeDown from "images/icons/swipe-down.svg";
 
 import Title from "components/ui/Title";
 import Marquee from "components/ui/Marquee";
@@ -82,7 +82,7 @@ const Overlay = ({ className, ...props }) => {
         setBreakpointSecond(false);
       }
 
-      if (scrollTop >= contactsScreen.offsetTop - 500) {
+      if (scrollTop >= contactsScreen.offsetTop - 450) {
         document.body.style.backgroundColor =
           theme === "light" ? "var(--secondary-color)" : "var(--primary-color)";
       }
@@ -138,7 +138,8 @@ const Overlay = ({ className, ...props }) => {
             className={clsx(styles.hint, breakpointSecond && styles.hidden)}
             onClick={handleSwipeDown}
           >
-            {localizedText[language].swipeDown} <Icon className={styles.swipeDownIcon} icon={swipeDown} />
+            {localizedText[language].swipeDown}{" "}
+            <Icon className={styles.swipeDownIcon} icon={swipeDown} />
           </button>
           <div
             className={clsx(styles.controls, breakpointFirst && styles.hidden)}
