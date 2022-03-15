@@ -88,21 +88,13 @@
 
   .infoWrapper > * {
     scroll-snap-align: center;
-    scroll-margin-top: -5rem;
-  }
-
-  .round {
-    bottom: -15%;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .infoWrapper > * {
-    height: 50vh;
-    scroll-margin-top: 0;
   }
 
   .infoWrapper > *:first-child {
     scroll-snap-align: unset;
+  }
+
+  .round {
+    bottom: -15%;
   }
 }
