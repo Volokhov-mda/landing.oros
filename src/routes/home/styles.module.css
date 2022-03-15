@@ -20,6 +20,7 @@
 
 .screen.hidden {
   opacity: 0;
+  transition-duration: 0s;
   transition-delay: 0s;
 }
 
