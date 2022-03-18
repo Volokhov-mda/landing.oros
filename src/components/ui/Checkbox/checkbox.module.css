@@ -16,8 +16,15 @@
   flex-shrink: 0;
   width: 1.2rem;
   height: 1.2rem;
-  border: 1px solid var(--secondary-color);
   cursor: pointer;
+}
+
+.mark.dark {
+  border: 1px solid var(--secondary-color);
+}
+
+.mark.light {
+  border: 1px solid var(--primary-color);
 }
 
 .mark::before {
@@ -31,6 +38,14 @@
   background-position: center;
   opacity: 0;
   transition: opacity var(--transition-duration);
+}
+
+.mark.dark::before {
+  filter: invert(1);
+}
+
+.mark.light::before {
+  filter: var(--filter-to-primary-color);
 }
 
 .checkbox:checked + .mark::before {

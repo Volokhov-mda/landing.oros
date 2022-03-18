@@ -112,6 +112,18 @@
   transition: text-decoration-color var(--transition-duration);
 }
 
+.hint:hover {
+  text-decoration-color: var(--secondary-color);
+}
+
+.hint.dark {
+  color: var(--secondary-color);
+}
+
+.hint.light {
+  color: var(--primary-color);
+}
+
 .swipeDownIcon {
   flex-shrink: 0;
   width: 1rem;
@@ -121,8 +133,12 @@
   animation: swipeDown 2s ease-in-out infinite;
 }
 
-.hint:hover {
-  text-decoration-color: var(--secondary-color);
+.hint.dark .swipeDownIcon {
+  filter: invert(1);
+}
+
+.hint.light .swipeDownIcon {
+  filter: var(--filter-to-primary-color);
 }
 
 .startJourneyWrapper {

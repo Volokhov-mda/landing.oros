@@ -164,7 +164,7 @@ const Overlay = ({ disableZoom, className, ...props }) => {
               </Link>
             </div>
             <button
-              className={clsx(styles.hint, breakpointSecond && styles.hidden)}
+              className={clsx(styles.hint, styles[theme], breakpointSecond && styles.hidden)}
               onClick={handleSwipeDown}
             >
               {window.innerWidth <= 1000
@@ -196,7 +196,7 @@ const Overlay = ({ disableZoom, className, ...props }) => {
               onClick={handleScrollJourney}
               className={clsx(
                 styles.startJourney,
-                // (zoomDisabled || breakpointSecond) && styles.hidden,
+                (zoomDisabled || breakpointSecond) && styles.hidden,
                 breakpointThird && styles.forceHidden
               )}
             />
