@@ -29,16 +29,17 @@
   position: sticky;
   white-space: normal;
   text-align: left;
-  top: 36%;
+  top: 50%;
+  transform: translateY(-50%);
   right: 0rem;
-  margin-top: 43%;
-  margin-bottom: 62%;
+  margin-top: 27%;
+  margin-bottom: 12%;
   font-size: var(--title-font-size);
 }
 
 .infoWrapper {
   display: grid;
-  gap: 1rem;
+  gap: 8.5rem;
   padding-top: 6.5rem;
   padding-bottom: 8rem;
 }
@@ -50,7 +51,7 @@
 
 .round {
   position: absolute;
-  bottom: -10%;
+  bottom: -25%;
   left: 50%;
   transform: translate(-45%, 0);
   width: calc(2rem * var(--scale-size));
@@ -70,6 +71,7 @@
 @media screen and (max-width: 1000px) {
   .scrollInfo {
     padding-top: 2rem;
+    margin: auto;
   }
 
   .stickyTitle {
@@ -84,24 +86,40 @@
   .infoWrapper {
     padding: 0;
     margin-top: 2rem;
+    gap: 5rem;
   }
 
-  .infoWrapper > * {
-    scroll-snap-align: center;
+  .infoWrapper > *:not(:first-child) {
     scroll-margin-top: -5rem;
+    scroll-snap-align: center;
+  }
+  
+  .infoWrapper > *:last-child {
+    scroll-snap-align: end;
+  }
+
+  .infoWrapper > *:last-child {
+    scroll-snap-align: end;
+    padding-bottom: 8rem;
   }
 
   .round {
-    bottom: -15%;
+    bottom: -16%;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .infoWrapper > *:first-child {
+  .infoWrapper > * {
     scroll-snap-align: unset;
   }
-
-  .infoWrapper > * {
+  
+  .infoWrapper > *:not(:first-child) {
+    scroll-snap-align: unset;
     scroll-margin-top: 0;
+  }
+
+  .infoWrapper > *:last-child {
+    scroll-snap-align: unset;
+    padding-bottom: 0;
   }
 }

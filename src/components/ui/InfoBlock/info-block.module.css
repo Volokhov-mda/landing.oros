@@ -1,32 +1,24 @@
 .infoBlock {
+  display: flex;
+  align-items: center;
   width: 100%;
   border-radius: var(--border-radius);
-  padding: 2.2rem 9rem 3.2rem 3.2rem;
   box-sizing: border-box;
 }
 
-.infoBlock.dark {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-}
-
-.infoBlock.light {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-}
-
-.iconWrapper {
+.square {
+  flex-shrink: 0;
   width: 5.5rem;
   height: 5.5rem;
-  padding: 1.25rem;
+  border-radius: 12px;
 }
 
-.iconWrapper.dark {
-  background-color: var(--secondary-color);
-}
-
-.iconWrapper.light {
+.infoBlock.dark .square {
   background-color: var(--primary-color);
+}
+
+.infoBlock.light .square {
+  background-color: var(--secondary-color);
 }
 
 .icon {
@@ -43,21 +35,13 @@
 }
 
 .text {
-  margin-top: 2.75rem;
+  margin-left: 2.75rem;
   font-size: 1.2rem;
 }
 
 @media screen and (max-width: 1000px) {
-  .infoBlock {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem;
-  }
-
   .text {
-    margin-top: 2rem;
-    text-align: center;
+    margin-left: 1rem;
+    font-size: 1rem;
   }
 }

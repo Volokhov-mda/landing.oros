@@ -17,6 +17,8 @@ const Agreement = ({ className, ...props }) => {
   useEffect(() => {
     document.body.style.overflow = "auto";
     window.document.title = "Privacy Policy — Oros Digital";
+
+    window.localStorage.setItem("fromPolicy", true);
   }, []);
 
   className = clsx(styles.agreement, className);
@@ -29,8 +31,8 @@ const Agreement = ({ className, ...props }) => {
         {agreementLocalizedText[language].map((section, i) => (
           <Section title={section.title} key={i}>
             {section.texts.map((text, j) => (
-              <>
-                <div key={j} dangerouslySetInnerHTML={{ __html: text.value }} />
+              <div key={j}>
+                <div dangerouslySetInnerHTML={{ __html: text.value }} />
                 {text.list && (
                   <ul className={styles.list}>
                     {text.list.map((listItem, k) => (
@@ -40,7 +42,7 @@ const Agreement = ({ className, ...props }) => {
                     ))}
                   </ul>
                 )}
-              </>
+              </div>
             ))}
           </Section>
         ))}

@@ -13,23 +13,42 @@
 
 .screen {
   scroll-snap-stop: always;
-  transition: opacity calc(var(--transition-duration) * 2);
-  transition-delay: var(--transition-duration);
+}
+
+.scrollInfo > * > * {
+  transition: opacity calc(var(--transition-duration) * 2)
+    calc(var(--transition-duration) * 2);
   opacity: 1;
 }
 
-.screen.hidden {
+.scrollInfo.hidden > * > * {
   opacity: 0;
   transition-duration: 0s;
   transition-delay: 0s;
 }
 
+.scrollInfo.forceShow > * > *:last-child {
+  opacity: 1;
+  transition: none;
+}
+
+.scrollInfo.forceShow > * > *:not(:last-child) {
+  opacity: 1;
+}
+
 .scrollInfo {
-  padding-bottom: 10rem;
+  padding-bottom: 13rem;
 }
 
 @media screen and (max-width: 1000px) {
   .scrollInfo {
-    padding-bottom: 12rem;
+    box-sizing: border-box;
+    padding-bottom: 9rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .scrollInfo {
+    padding-bottom: 0;
   }
 }

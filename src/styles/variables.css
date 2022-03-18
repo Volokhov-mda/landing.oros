@@ -17,24 +17,12 @@
   --filter-to-primary-color: invert(0%) sepia(13%) saturate(160%)
     hue-rotate(317deg) brightness(92%) contrast(86%);
 
-  --scale-size: 205;
-}
-
-@media screen and (max-width: 2560px) {
-  :root {
-    --scale-size: 87;
-  }
-}
-
-@media screen and (max-width: 1440px) {
-  :root {
-    --scale-size: 83;
-  }
+  --scale-size: 87;
 }
 
 @media screen and (max-width: 1000px) {
   :root {
-    --scale-size: 75;
+    /* --scale-size: 75; */
     --font-size: 16px;
     --title-font-size: 2rem;
   }

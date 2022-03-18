@@ -19,12 +19,14 @@ import Icon from "components/ui/Icon";
 
 import styles from "./overlay.module.css";
 
-const Overlay = ({ className, ...props }) => {
+const Overlay = ({ disableZoom, className, ...props }) => {
   const [theme] = useAtom(themeAtom);
   const [language, setLanguage] = useAtom(languageAtom);
 
   const [breakpointFirst, setBreakpointFirst] = useState(false);
   const [breakpointSecond, setBreakpointSecond] = useState(false);
+  const [breakpointThird, setBreakpointThird] = useState(false);
+  const [zoomDisabled, setZoomDisabled] = useState(disableZoom);
 
   const handleChangeLanguage = () =>
     setLanguage(language === "eng" ? "ru" : "eng");
@@ -34,7 +36,7 @@ const Overlay = ({ className, ...props }) => {
     const scrollInfoScreen = document.getElementById("scroll-info");
 
     scrollSnap.scrollTo({
-      top: scrollInfoScreen.offsetTop,
+      top: scrollInfoScreen.offsetTop - (window.innerWidth < 2560 ? 150 : window.innerHeight / 2),
       behavior: "smooth",
     });
   };
@@ -66,7 +68,9 @@ const Overlay = ({ className, ...props }) => {
     const onScroll = () => {
       const scrollTop = scrollSnap.scrollTop;
 
-      if (scrollTop < window.innerHeight / 2) {
+      console.log(scrollTop);
+
+      if (scrollTop < window.innerHeight * 0.3) {
         setBreakpointFirst(false);
       } else {
         setBreakpointFirst(true);
@@ -80,6 +84,27 @@ const Overlay = ({ className, ...props }) => {
         document.body.style.backgroundColor =
           theme === "light" ? "var(--secondary-color)" : "var(--primary-color)";
         setBreakpointSecond(false);
+        setZoomDisabled(false);
+      }
+
+      if (window.innerWidth > 1920) {
+        if (scrollTop > window.innerHeight * 1.63) {
+          setBreakpointThird(true);
+        } else {
+          setBreakpointThird(false);
+        }
+      } else if (window.innerWidth > 1000) {
+        if (scrollTop >= window.innerHeight * 1.95) {
+          setBreakpointThird(true);
+        } else {
+          setBreakpointThird(false);
+        }
+      } else {
+        if (scrollTop >= window.innerHeight * 2.15) {
+          setBreakpointThird(true);
+        } else {
+          setBreakpointThird(false);
+        }
       }
 
       if (scrollTop >= contactsScreen.offsetTop - 450) {
@@ -98,77 +123,87 @@ const Overlay = ({ className, ...props }) => {
   className = clsx(!breakpointSecond && styles.frontLayer, className);
 
   return (
-    <div id={styles.overlay} className={className} {...props}>
-      <div className={styles.content}>
-        <div
-          className={clsx(
-            styles.titleWrapper,
-            breakpointSecond && styles.remove
-          )}
-        >
-          <Title
-            className={clsx(styles.title, breakpointFirst && styles.hidden)}
-          >
-            OROS DIGITAL
-          </Title>
-          <Marquee
-            className={clsx(styles.marquee, breakpointFirst && styles.hidden)}
-          >
-            INFLUENCER MARKETING AGENCY
-          </Marquee>
-        </div>
-
-        <div
-          className={clsx(
-            styles.floatingMenu,
-            breakpointSecond && styles.hidden
-          )}
-        >
+    <>
+      <div id={styles.overlay} className={className} {...props}>
+        <div className={styles.content}>
           <div
-            className={clsx(styles.contacts, breakpointFirst && styles.hidden)}
-          >
-            <Link
-              className={clsx(styles.link, styles[theme])}
-              href={`mailto:${email}`}
-            >
-              {email}
-            </Link>
-          </div>
-          <button
-            className={clsx(styles.hint, breakpointSecond && styles.hidden)}
-            onClick={handleSwipeDown}
-          >
-            {localizedText[language].swipeDown}{" "}
-            <Icon className={styles.swipeDownIcon} icon={swipeDown} />
-          </button>
-          <div
-            className={clsx(styles.controls, breakpointFirst && styles.hidden)}
-          >
-            <FloatingButton onClick={handleChangeLanguage}>
-              {getLanguageButtontext(language === "ru" ? "eng" : "ru")}
-            </FloatingButton>
-          </div>
-        </div>
-
-        <div
-          className={clsx(
-            styles.startJourneyWrapper,
-            breakpointFirst && styles.center,
-            breakpointSecond && styles.scale,
-            styles[language]
-          )}
-        >
-          <StartJourney
-            showButton={breakpointFirst}
-            onClick={handleScrollJourney}
             className={clsx(
-              styles.startJourney,
-              breakpointSecond && styles.hidden
+              styles.titleWrapper,
+              (zoomDisabled || breakpointSecond) && styles.remove
             )}
-          />
+          >
+            <Title
+              className={clsx(styles.title, breakpointFirst && styles.hidden)}
+            >
+              OROS DIGITAL
+            </Title>
+            <Marquee
+              className={clsx(styles.marquee, breakpointFirst && styles.hidden)}
+            >
+              INFLUENCER MARKETING AGENCY
+            </Marquee>
+          </div>
+
+          <div
+            className={clsx(
+              styles.floatingMenu,
+              (zoomDisabled || breakpointSecond) && styles.hidden
+            )}
+          >
+            <div
+              className={clsx(
+                styles.contacts,
+                breakpointFirst && styles.hidden
+              )}
+            >
+              <Link
+                className={clsx(styles.link, styles[theme])}
+                href={`mailto:${email}`}
+              >
+                {email}
+              </Link>
+            </div>
+            <button
+              className={clsx(styles.hint, breakpointSecond && styles.hidden)}
+              onClick={handleSwipeDown}
+            >
+              {window.innerWidth <= 1000
+                ? localizedText[language].swipeDown
+                : localizedText[language].scrollDown}{" "}
+              <Icon className={styles.swipeDownIcon} icon={swipeDown} />
+            </button>
+            <div
+              className={clsx(
+                styles.controls,
+                breakpointFirst && styles.hidden
+              )}
+            >
+              <FloatingButton onClick={handleChangeLanguage}>
+                {getLanguageButtontext(language === "ru" ? "eng" : "ru")}
+              </FloatingButton>
+            </div>
+          </div>
+          <div
+            className={clsx(
+              styles.startJourneyWrapper,
+              (zoomDisabled || breakpointFirst) && styles.center,
+              (zoomDisabled || breakpointSecond) && styles.scale,
+              styles[language]
+            )}
+          >
+            <StartJourney
+              showButton={breakpointFirst}
+              onClick={handleScrollJourney}
+              className={clsx(
+                styles.startJourney,
+                // (zoomDisabled || breakpointSecond) && styles.hidden,
+                breakpointThird && styles.forceHidden
+              )}
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

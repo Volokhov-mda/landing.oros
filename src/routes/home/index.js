@@ -1,5 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import clsx from "clsx";
+import { useAtom } from "jotai";
+
+import { themeAtom } from "data/atoms";
 
 import Overlay from "components/partials/Overlay";
 import ScrollSnap from "components/ui/ScrollSnap";
@@ -9,7 +12,11 @@ import Contacts from "components/partials/Contacts";
 import styles from "./styles.module.css";
 
 const Home = () => {
-  const [breakpoint, setBreakpoint] = useState(false);
+  const disableZoom = localStorage.getItem("fromPolicy");
+
+  const [theme] = useAtom(themeAtom);
+  const [breakpointFirst, setBreakpointFirst] = useState(false);
+  const [breakpointSecond, setBreakpointSecond] = useState(false);
 
   useEffect(() => {
     const scrollSnap = document.getElementById("scrollSnap");
@@ -18,9 +25,29 @@ const Home = () => {
       const scrollTop = scrollSnap.scrollTop;
 
       if (scrollTop < window.innerHeight * 1.3) {
-        setBreakpoint(false);
+        setBreakpointFirst(false);
       } else {
-        setBreakpoint(true);
+        setBreakpointFirst(true);
+      }
+      
+      if (window.innerWidth > 1920) {
+        if (scrollTop > window.innerHeight * 1.63) {
+          setBreakpointSecond(true);
+        } else {
+          setBreakpointSecond(false);
+        }
+      } else if (window.innerWidth > 1000) {
+        if (scrollTop >= window.innerHeight * 1.95) {
+          setBreakpointSecond(true);
+        } else {
+          setBreakpointSecond(false);
+        }
+      } else {
+        if (scrollTop >= window.innerHeight * 2.15) {
+          setBreakpointSecond(true);
+        } else {
+          setBreakpointSecond(false);
+        }
       }
     };
 
@@ -34,10 +61,23 @@ const Home = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const scrollSnap = document.getElementById("scrollSnap");
+    const contactsScreen = document.getElementById("contacts-screen");
+
+    if (disableZoom) {
+      scrollSnap.scrollTo({
+        top: contactsScreen.offsetTop,
+        behavior: "instant",
+      });
+      localStorage.removeItem("fromPolicy");
+    }
+  }, []);
+
   return (
     <ScrollSnap id="scrollSnap">
       <div className={styles.content}>
-        <Overlay />
+        <Overlay disableZoom={disableZoom} />
         <ScrollSnap.Screen className={styles.screen} height="100vh" snap />
         <ScrollSnap.Screen
           id="start-journey"
@@ -50,15 +90,20 @@ const Home = () => {
           className={clsx(
             styles.screen,
             styles.scrollInfo,
-            !breakpoint && styles.hidden
+            styles[theme],
+            !breakpointFirst && !breakpointSecond && styles.hidden,
+            breakpointSecond && styles.forceShow
           )}
+          minHeight={window.innerWidth <= 1000 ? "100vh" : "unset"}
           snap={window.innerWidth <= 1000}
         >
-          <ScrollInfo />
+          <ScrollInfo className={clsx(
+            
+          )} />
         </ScrollSnap.Screen>
         <ScrollSnap.Screen
           id="contacts-screen"
-          className={clsx(styles.screen, styles.contacts)}
+          className={clsx(styles.screen, styles[theme], styles.contacts)}
           minHeight="100vh"
           snap
         >

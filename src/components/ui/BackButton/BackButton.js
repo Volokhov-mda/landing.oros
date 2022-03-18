@@ -10,9 +10,14 @@ import Icon from "components/ui/Icon";
 import Logo from "components/ui/Logo";
 
 import styles from "./back-button.module.css";
+import { useEffect } from "react";
 
 const BackButton = ({ className, ...props }) => {
   const [theme] = useAtom(themeAtom);
+
+  useEffect(() => {
+    
+  }, []);
 
   className = clsx(styles.backButton, className);
 
