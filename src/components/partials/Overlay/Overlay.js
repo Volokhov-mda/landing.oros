@@ -100,7 +100,7 @@ const Overlay = ({ disableZoom, className, ...props }) => {
           setBreakpointThird(false);
         }
       } else {
-        if (scrollTop >= window.innerHeight * 2.15) {
+        if (scrollTop >= window.innerHeight * 2.18) {
           setBreakpointThird(true);
         } else {
           setBreakpointThird(false);

@@ -43,7 +43,7 @@ const Home = () => {
           setBreakpointSecond(false);
         }
       } else {
-        if (scrollTop >= window.innerHeight * 2.15) {
+        if (scrollTop >= window.innerHeight * 2.18) {
           setBreakpointSecond(true);
         } else {
           setBreakpointSecond(false);
