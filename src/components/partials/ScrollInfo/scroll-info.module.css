@@ -109,6 +109,10 @@
 }
 
 @media screen and (max-width: 500px) {
+  .scrollInfo {
+    margin-top: 2rem;
+  }
+
   .infoWrapper > * {
     scroll-snap-align: unset;
   }
