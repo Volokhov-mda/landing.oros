@@ -159,7 +159,7 @@
 
 .startJourneyWrapper.scale {
   pointer-events: none;
-  transition-duration: calc(var(--transition-duration) * 4);
+  transition-duration: calc(var(--transition-duration) * 3);
 }
 
 .startJourneyWrapper.scale.ru {

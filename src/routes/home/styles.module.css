@@ -17,7 +17,7 @@
 
 .scrollInfo > * > * {
   transition: opacity calc(var(--transition-duration) * 2)
-    calc(var(--transition-duration) * 2);
+    calc(var(--transition-duration) * 1);
   opacity: 1;
 }
 
