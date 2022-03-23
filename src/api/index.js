@@ -7,7 +7,13 @@ export const addRow = async (data) => {
       method: "POST",
       body: new URLSearchParams(data),
     }
-  );
+  )
+    .then((response) => {
+      if (response.ok) {
+        return response;
+      }
+    })
+    .catch((error) => error);
 
   return response;
 };

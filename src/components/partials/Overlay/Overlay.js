@@ -68,8 +68,6 @@ const Overlay = ({ disableZoom, className, ...props }) => {
     const onScroll = () => {
       const scrollTop = scrollSnap.scrollTop;
 
-      console.log(scrollTop);
-
       if (scrollTop < window.innerHeight * 0.3) {
         setBreakpointFirst(false);
       } else {

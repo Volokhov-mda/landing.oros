@@ -33,9 +33,9 @@ const Form = ({ className, ...props }) => {
     setLoading(true);
 
     const { ok } = await addRow({
-      Name: data.name,
-      Email: data.email,
-      Message: data.message,
+      Name: data.name.trim(),
+      Email: data.email.trim(),
+      Message: data.message.trim(),
     });
 
     setLoading(false);
